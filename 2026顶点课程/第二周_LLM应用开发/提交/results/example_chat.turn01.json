@@ -1,0 +1,77 @@
+{
+  "record_origin": "live_model_call",
+  "constraint_mode": "prompt_only",
+  "environment": {
+    "model": "../第一周_LLM推理/models/Qwen2.5-1.5B-Instruct",
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "python": "3.12.13",
+    "torch": "2.7.1+cu128",
+    "transformers": "4.51.3",
+    "openai": "1.109.1",
+    "pydantic": "2.11.7",
+    "fastapi": "0.116.1",
+    "uvicorn": "0.35.0"
+  },
+  "base_url": "http://127.0.0.1:49027/v1",
+  "request": {
+    "model": "Qwen2.5-1.5B-Instruct",
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个 Python 代码助手。只返回一个 JSON 对象，恰好包含 function_name 和 code 两个字符串字段。回答从 { 开始，到 } 结束；不要 Markdown 代码围栏或其他文字。code 中的换行用 JSON 的\\n转义。注意 Python 关键字和变量之间的空格。"
+      },
+      {
+        "role": "user",
+        "content": "按照以下示例的形式回答，示例只用于展示格式：\n请求：生成判断整数是否为偶数的函数 is_even(n)。\n回答：\n{\"function_name\":\"is_even\",\"code\":\"def is_even(n):\\n    return n % 2 == 0\"}\n\n现在处理本次请求：生成一个简短的 Python 函数 count_positive(nums)。\nnums 是一个数值列表，返回其中严格大于 0 的元素个数。\n零和负数不计入；空列表返回 0。无需导入任何库。\n遍历列表时，循环变量使用 x，比较条件是 x > 0。\n\n只返回一个合法的 JSON 对象，恰好包含两个必填字段：\n1. function_name：字符串，值为 count_positive。\n2. code：字符串，包含完整函数定义，尽量使用两行代码。\n代码字符串中的换行必须用 JSON 的 \\n 转义，字符串用双引号。\n不要 Markdown 代码围栏，不要解释，不要增加其他字段。\n回答的第一个字符必须是 {，最后一个字符必须是 }。直接输出 JSON：\n"
+      }
+    ],
+    "max_tokens": 256,
+    "temperature": 0,
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    }
+  },
+  "raw_text": "{\"function_name\":\"count_positive\",\"code\":\"def count_positive(nums):\\n    if not nums:\\n        return 0\\n    count = 0\\n    for x in nums:\\n        if x > 0:\\n            count += 1\\n    return count\"}",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 58,
+    "prompt_tokens": 309,
+    "total_tokens": 367,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "result": {
+    "status": "schema_valid",
+    "parsed": {
+      "function_name": "count_positive",
+      "code": "def count_positive(nums):\n    if not nums:\n        return 0\n    count = 0\n    for x in nums:\n        if x > 0:\n            count += 1\n    return count"
+    },
+    "python_syntax": {
+      "status": "syntax_valid"
+    },
+    "functional_correctness": "not_tested"
+  },
+  "total_seconds": 2.371625896077603,
+  "first_text_seconds": 1.153809104114771,
+  "json_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "function_name": {
+        "title": "Function Name",
+        "type": "string"
+      },
+      "code": {
+        "title": "Code",
+        "type": "string"
+      }
+    },
+    "required": [
+      "function_name",
+      "code"
+    ],
+    "title": "CodeResult",
+    "type": "object"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "function_name": "count_positive",
+  "prompt": "生成一个简短的 Python 函数 count_positive(nums)。nums 是一个数值列表，返回其中严格大于 0 的元素个数。零和负数不计入；空列表返回 0。无需导入任何库。\n只返回一个合法的 JSON 对象，恰好包含 function_name 和 code 两个字符串字段，例如：\n{\"function_name\":\"is_even\",\"code\":\"def is_even(n):\\n    return n % 2 == 0\"}\n代码字符串中的换行用 \\n 转义；不要 Markdown 代码围栏，不要解释。直接输出 JSON：",
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          -2,
+          3,
+          0
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        []
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [
+          0.5,
+          -0.5,
+          2
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        [
+          7
+        ]
+      ],
+      "expected": 1
+    }
+  ]
+}

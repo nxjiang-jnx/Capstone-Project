@@ -1,0 +1,48 @@
+{
+  "function_name": "run_length_encode",
+  "prompt": "生成一个 Python 函数 run_length_encode(s)，对字符串做游程编码：把连续相同的字符写成“字符+连续次数”，次数为 1 时也要写出，次数可以是多位数。例如 \"aaabcc\" 编码为 \"a3b1c2\"。空字符串返回空字符串。无需导入任何库。\n只返回一个合法的 JSON 对象，恰好包含 function_name 和 code 两个字符串字段，例如：\n{\"function_name\":\"is_even\",\"code\":\"def is_even(n):\\n    return n % 2 == 0\"}\n代码字符串中的换行用 \\n 转义；不要 Markdown 代码围栏，不要解释。直接输出 JSON：",
+  "tests": [
+    {
+      "args": [
+        "aaabcc"
+      ],
+      "expected": "a3b1c2"
+    },
+    {
+      "args": [
+        ""
+      ],
+      "expected": ""
+    },
+    {
+      "args": [
+        "a"
+      ],
+      "expected": "a1"
+    },
+    {
+      "args": [
+        "abc"
+      ],
+      "expected": "a1b1c1"
+    },
+    {
+      "args": [
+        "aabbaa"
+      ],
+      "expected": "a2b2a2"
+    },
+    {
+      "args": [
+        "zzzzzzzzzzzz"
+      ],
+      "expected": "z12"
+    },
+    {
+      "args": [
+        "AAa"
+      ],
+      "expected": "A2a1"
+    }
+  ]
+}

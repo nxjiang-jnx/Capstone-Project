@@ -1,0 +1,71 @@
+{
+  "function_name": "second_largest",
+  "prompt": "生成一个 Python 函数 second_largest(nums)，返回整数列表中第二大的不同值；重复的数只算一次。如果不同的值少于两个（包括空列表），返回 None。不要修改传入的列表，无需导入任何库。\n只返回一个合法的 JSON 对象，恰好包含 function_name 和 code 两个字符串字段，例如：\n{\"function_name\":\"is_even\",\"code\":\"def is_even(n):\\n    return n % 2 == 0\"}\n代码字符串中的换行用 \\n 转义；不要 Markdown 代码围栏，不要解释。直接输出 JSON：",
+  "tests": [
+    {
+      "args": [
+        [
+          3,
+          1,
+          2
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        [
+          5,
+          5,
+          3
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": null
+    },
+    {
+      "args": [
+        [
+          2,
+          2
+        ]
+      ],
+      "expected": null
+    },
+    {
+      "args": [
+        []
+      ],
+      "expected": null
+    },
+    {
+      "args": [
+        [
+          -1,
+          -5,
+          -3
+        ]
+      ],
+      "expected": -3
+    },
+    {
+      "args": [
+        [
+          4,
+          4,
+          4,
+          1,
+          1
+        ]
+      ],
+      "expected": 1
+    }
+  ]
+}
