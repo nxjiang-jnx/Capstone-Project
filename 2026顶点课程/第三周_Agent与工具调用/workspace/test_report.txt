@@ -1,0 +1,2 @@
+passed=47
+failed=3
