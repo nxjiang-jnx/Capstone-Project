@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "kind": "fact",
+      "text": "我本地有 4 张 RTX PRO 6000 显卡，平时用 GPU 跑实验",
+      "by": "user",
+      "created": "2026-10-15T06:45:58"
+    },
+    {
+      "id": 2,
+      "kind": "fact",
+      "text": "我前三周的作业都用 Qwen2.5 系列模型",
+      "by": "user",
+      "created": "2026-10-15T06:45:58"
+    },
+    {
+      "id": 3,
+      "kind": "fact",
+      "text": "我习惯用 conda 管理 Python 环境",
+      "by": "user",
+      "created": "2026-10-15T06:45:58"
+    },
+    {
+      "id": 4,
+      "kind": "fact",
+      "text": "我第三周作业的拓展方向是只改 Prompt 不改 Agent Loop",
+      "by": "user",
+      "created": "2026-10-15T06:45:58"
+    },
+    {
+      "id": 5,
+      "kind": "fact",
+      "text": "我在课程第 7 组。",
+      "by": "agent",
+      "created": "2026-10-15T06:46:08"
+    },
+    {
+      "id": 6,
+      "kind": "preference",
+      "text": "先给一句话结论，再分步骤，命令放在代码块里。",
+      "by": "agent",
+      "created": "2026-10-15T06:46:08"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "task": "我第二周作业里 fresh 修复模式在三个任务上的效果怎么样？",
+  "memory_used": {
+    "preferences": [],
+    "facts": []
+  },
+  "trace": [
+    {
+      "step": 1,
+      "raw": "<tool_call>\n{\"name\": \"search_knowledge\", \"arguments\": {\"query\": \"fresh 修复模式 第二周 作业 效果\", \"scope\": \"my-w02\"}}\n</tool_call>",
+      "latency_s": 1.222,
+      "tool_calls": [
+        {
+          "name": "search_knowledge",
+          "arguments": {
+            "query": "fresh 修复模式 第二周 作业 效果",
+            "scope": "my-w02"
+          }
+        }
+      ],
+      "observations": [
+        {
+          "name": "search_knowledge",
+          "arguments": {
+            "query": "fresh 修复模式 第二周 作业 效果",
+            "scope": "my-w02"
+          },
+          "result": [
+            {
+              "id": "my-w02-report#10",
+              "title": "我的第二周作业提交说明（实验记录） › 拓展与结果",
+              "text": "错行原文；v3 增加 fresh 模式。\n\n- **运行结果**（三个任务，greedy 解码，修复上限 3 轮）：\n\n  | 任务（测试数） | 不修复 `repair0` | v1 history（仅行号） | v2 history（+出错行原文） | v3 fresh |\n  | --- | --- | --- | --- | --- |\n  | count_positive (5) | ✗ JSON 解析失败 | ✓ 第 3 轮通过 5/5 | ✓ 第 3 轮通过 5/5 | ✓ **第 1 轮通过 5/5** |\n  | second_largest (7) | ✗ 语法错误 | ✗ 3 轮仍失败 | ✗ 3 轮仍失败 | ✓ **第 2 轮通过 7/7** |",
+              "score": 0.0328
+            },
+            {
+              "id": "my-w02-report#9",
+              "title": "我的第二周作业提交说明（实验记录） › 拓展与结果",
+              "text": "k`：把每种失败（JSON 解析 / 字段 / 语法 / 函数名 / 测试失败 / 运行异常）转成一条具体的修改要求。\n  5. `--repair N`：未通过且回答完整时，自动发出反馈并重试，最多 N 轮。每轮单独保存为 `.turnNN.json`，记录 `prompt_source`（user / auto_repair）和 `repair_round`。\n  6. `--repair-mode`：`history` 在对话中追加修改要求；`fresh` 丢弃失败回答，重新发送原始要求并附上问题说明。\n  7. 迭代过程：v1 语法错误反馈只有行号；v2 增加出错行原文；v3 增加 fresh 模式。\n\n- **运行结果**（三个任务，greedy 解码，修复上限 3 轮）：",
+              "score": 0.0323
+            },
+            {
+              "id": "my-w02-report#13",
+              "title": "我的第二周作业提交说明（实验记录） › 拓展与结果",
+              "text": ". fresh 模式把错误答案移出上下文，只保留问题说明，三个任务里修好了两个，修复轮数也更少。这是本次最明确的结论。\n  4. `rle` 始终没修好：fresh 模式下模型开始在 `code` 里写中文伪代码，这是 1.5B 模型的能力边界。可能的后续改进：在任务 Prompt 中给出示例代码，或者换 3B 模型。\n  5. 局限：本次三个任务都没有出现“语法正确但测试不通过”的回答，所以测试失败反馈这条路径只做了离线验证，没有在真实模型上触发。另外，反馈里会写出失败用例，存在模型针对用例写特判的风险，Prompt 中已要求不要特判。执行生成代码只做了子进程隔离和超时，不是完整沙箱，只适合在本机实验中使用。",
+              "score": 0.0317
+            },
+            {
+              "id": "my-w02-report#12",
+              "title": "我的第二周作业提交说明（实验记录） › 拓展与结果",
+              "text": "后的脚本跑原有的 plain / example / chat 流程，输出与原版逐字一致。\n\n- **观察与问题**：\n  1. 没有外部校验时，小模型的第一次输出三个任务都不可用。其中 `count_positive` 在 `EXAMPLE_PROMPT` 下能写对，换成我的 Prompt 写法就把 `)` 写成了 `}`。可见输出对 Prompt 措辞很敏感，程序校验是必要的。\n  2. history 模式下，模型几乎原样照抄历史里自己的错误代码。v2 已经把出错行原文放进反馈，仍然没有改善，所以问题不在于“找不到错在哪”。原因是 temperature 固定为 0 的 greedy 解码加上错误答案留在上下文里，模型倾向于复制上文。\n  3. fresh 模式把错误答案移出上下文，只保留问题说明，三个任务里修好了两个，修复轮数也更少。这是本次最明确的结论。",
+              "score": 0.031
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "raw": "第二周作业中，fresh 修复模式在三个任务上的效果如下：\n\n- **count_positive (5)**：使用 v3 fresh 模式后，模型在第 1 轮就成功通过了 5/5 的测试。\n- **second_largest (7)**：使用 v3 fresh 模式后，模型在第 2 轮就成功通过了 7/7 的测试。\n- **未提及**：对于第三个任务，fresh 模式未能成功修复。\n\n此外，fresh 模式的一个显著优点是它会将错误的答案从上下文中移除，只保留问题说明，这有助于减少模型复制错误代码的问题。然而，fresh 模式并未完全解决所有问题，特别是在处理特定用例时，模型可能会产生特判。总体来说，fresh 模式在本次实验中表现出了较好的效果。",
+      "latency_s": 6.222,
+      "tool_calls": []
+    }
+  ],
+  "status": "ok",
+  "answer": "第二周作业中，fresh 修复模式在三个任务上的效果如下：\n\n- **count_positive (5)**：使用 v3 fresh 模式后，模型在第 1 轮就成功通过了 5/5 的测试。\n- **second_largest (7)**：使用 v3 fresh 模式后，模型在第 2 轮就成功通过了 7/7 的测试。\n- **未提及**：对于第三个任务，fresh 模式未能成功修复。\n\n此外，fresh 模式的一个显著优点是它会将错误的答案从上下文中移除，只保留问题说明，这有助于减少模型复制错误代码的问题。然而，fresh 模式并未完全解决所有问题，特别是在处理特定用例时，模型可能会产生特判。总体来说，fresh 模式在本次实验中表现出了较好的效果。",
+  "citation_checks": [
+    {
+      "cited": [],
+      "invalid": [],
+      "urls": [],
+      "problems": [
+        "回答中没有任何有效的片段 id 引用"
+      ],
+      "passed": false,
+      "step": 2
+    }
+  ],
+  "citations_valid": false,
+  "retrieved_ids": [
+    "my-w02-report#10",
+    "my-w02-report#12",
+    "my-w02-report#13",
+    "my-w02-report#9"
+  ],
+  "total_s": 7.46,
+  "model": "models/Qwen2.5-3B-Instruct",
+  "system": "mine-base",
+  "score": {
+    "status": "ok",
+    "points": "2/3",
+    "all_points": false,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2
+  }
+}

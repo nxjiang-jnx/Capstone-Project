@@ -1,0 +1,61 @@
+{
+  "task": "混合检索里的 RRF 为什么按名次而不是按分数融合？示例里平滑常数 c 取多少？",
+  "memory_used": [],
+  "trace": [
+    {
+      "step": 1,
+      "raw": "为了回答您的问题，我需要查询相关资料。\n\n<tool_call>\n{\"name\": \"search_knowledge\", \"arguments\": {\"query\": \"混合检索 RRF 名次 分数 融合 平滑常数 c\"}}\n</tool_call>",
+      "latency_s": 1.06,
+      "tool_calls": [
+        {
+          "name": "search_knowledge",
+          "arguments": {
+            "query": "混合检索 RRF 名次 分数 融合 平滑常数 c"
+          }
+        }
+      ],
+      "observations": [
+        {
+          "name": "search_knowledge",
+          "result": [
+            {
+              "id": "w06-slides-rag.md#18",
+              "text": "。\n来源：Anthropic · Contextual Retrieval；Azure AI Search · Hybrid search\n\n## 第 16 页 2.1 RRF：按名次融合结果\n\n各路分数尺度不同，可以先比较排序位置\nrank 从 1 开始；c 为平滑常数；未出现在某一路时，该路贡献为 0。\n候选 | 关键词名次 | 向量名次 | RRF（示例 c = 60）\nA | 1 | 8 | 1/61 + 1/68 ≈ 0.03110\nB | 3 | 2 | 1/63",
+              "score": 0.6254
+            },
+            {
+              "id": "w01-slides.md#45",
+              "text": "B 将分数除以 √128\n内容参考自：Jay Alammar / The Illustrated Transformer https://jalammar.github.io/illustrated-transformer/\n\n## 第 25 页 2.8 Scaled Dot-Product Attention\n\n拼接各 head 的 attention 输出，再用 o_proj 混合不同 head 的特征\n内容参考自：Vaswani et al. / Attention I",
+              "score": 0.5677
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "raw": "根据查询到的信息，混合检索中的 RRF (Relevance Ranking Function) 是按照名次而非分数直接融合结果的原因是各个评分尺度不同，可以通过比较排序位置来实现。具体来说，rank 从 1 开始，c 为平滑常数，当某条路径未出现某个候选项时，该路径的贡献为 0。\n\n在示例中，平滑常数 c 被设置为 60。因此，对于候选 A 和 B，其 RRF 计算如下：\n\n- 候选 A: \\( \\frac{1}{61} + \\frac{1}{68} \\approx 0.03110 \\)\n- 候选 B: \\( \\frac{1}{63} \\)\n\n这表明在计算 RRF 时，使用了特定的平滑常数 c 来调整排名的位置，以确保不同来源的评分能够进行有效的融合。\n\n片段编号：w06-slides-rag.md#18",
+      "latency_s": 4.981,
+      "tool_calls": []
+    }
+  ],
+  "status": "ok",
+  "answer": "根据查询到的信息，混合检索中的 RRF (Relevance Ranking Function) 是按照名次而非分数直接融合结果的原因是各个评分尺度不同，可以通过比较排序位置来实现。具体来说，rank 从 1 开始，c 为平滑常数，当某条路径未出现某个候选项时，该路径的贡献为 0。\n\n在示例中，平滑常数 c 被设置为 60。因此，对于候选 A 和 B，其 RRF 计算如下：\n\n- 候选 A: \\( \\frac{1}{61} + \\frac{1}{68} \\approx 0.03110 \\)\n- 候选 B: \\( \\frac{1}{63} \\)\n\n这表明在计算 RRF 时，使用了特定的平滑常数 c 来调整排名的位置，以确保不同来源的评分能够进行有效的融合。\n\n片段编号：w06-slides-rag.md#18",
+  "total_s": 6.05,
+  "model": "models/Qwen2.5-7B-Instruct",
+  "system": "ref",
+  "score": {
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [
+      "w06-slides-rag.md#18"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2
+  }
+}

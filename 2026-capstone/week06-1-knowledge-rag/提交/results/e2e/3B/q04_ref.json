@@ -1,0 +1,59 @@
+{
+  "task": "混合检索里的 RRF 为什么按名次而不是按分数融合？示例里平滑常数 c 取多少？",
+  "memory_used": [],
+  "trace": [
+    {
+      "step": 1,
+      "raw": "为了回答这个问题，我们首先需要了解背景信息和相关知识。这里提到的“混合检索”可能是指某种搜索或推荐算法，而“RRF”可能是该算法中的一个组件。同时，关于平滑常数 \\(c\\) 的值，这通常取决于具体的应用场景和数据特性。\n\n### 第一部分：RRF 按名次而不是按分数融合的原因\n\n我们可以尝试通过搜索知识来获取更多关于 RRF 和其融合策略的信息。\n<tool_call>\n{\"name\": \"search_knowledge\", \"arguments\": {\"query\": \"RRF 按名次而不是按分数融合\"}}\n</tool_call>\n",
+      "latency_s": 4.486,
+      "tool_calls": [
+        {
+          "name": "search_knowledge",
+          "arguments": {
+            "query": "RRF 按名次而不是按分数融合"
+          }
+        }
+      ],
+      "observations": [
+        {
+          "name": "search_knowledge",
+          "result": [
+            {
+              "id": "w06-slides-rag.md#18",
+              "text": "。\n来源：Anthropic · Contextual Retrieval；Azure AI Search · Hybrid search\n\n## 第 16 页 2.1 RRF：按名次融合结果\n\n各路分数尺度不同，可以先比较排序位置\nrank 从 1 开始；c 为平滑常数；未出现在某一路时，该路贡献为 0。\n候选 | 关键词名次 | 向量名次 | RRF（示例 c = 60）\nA | 1 | 8 | 1/61 + 1/68 ≈ 0.03110\nB | 3 | 2 | 1/63",
+              "score": 0.6194
+            },
+            {
+              "id": "w01-slides.md#45",
+              "text": "B 将分数除以 √128\n内容参考自：Jay Alammar / The Illustrated Transformer https://jalammar.github.io/illustrated-transformer/\n\n## 第 25 页 2.8 Scaled Dot-Product Attention\n\n拼接各 head 的 attention 输出，再用 o_proj 混合不同 head 的特征\n内容参考自：Vaswani et al. / Attention I",
+              "score": 0.5723
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "raw": "根据搜索到的知识资料，RRF（Rank-Weighted Retrieval Function）在融合结果时是按照名次而不是分数进行融合的。具体来说，RRF 的计算公式如下：\n\n\\[ \\text{RRF} = \\sum_{i=1}^{k} \\frac{1}{r_i + c} \\]\n\n其中：\n- \\(r_i\\) 是第 \\(i\\) 路的结果在排序中的位置（从 1 开始计数）。\n- \\(c\\) 是平滑常数，用于避免分母为零的情况。\n\n资料中给出的例子中，\\(c\\) 的值为 60。因此，RRF 的计算方式是基于各路结果在排序中的位置，并通过平滑常数 \\(c\\) 进行调整。\n\n### 第二部分：平滑常数 \\(c\\) 的取值\n\n关于平滑常数 \\(c\\) 的具体取值，资料中没有直接给出。通常情况下，这个值的选择会根据具体的应用场景和数据特性来决定。在某些情况下，\\(c\\) 可以设置得较大，以减少对个别路径结果的过分影响。例如，在上述例子中，\\(c\\) 被设置为 60。\n\n总结来说，RRF 按名次而不是按分数融合是因为各路分数尺度不同，通过比较排序位置来解决这一问题。至于平滑常数 \\(c\\) 的取值，建议根据具体需求进行调整。",
+      "latency_s": 9.361,
+      "tool_calls": []
+    }
+  ],
+  "status": "ok",
+  "answer": "根据搜索到的知识资料，RRF（Rank-Weighted Retrieval Function）在融合结果时是按照名次而不是分数进行融合的。具体来说，RRF 的计算公式如下：\n\n\\[ \\text{RRF} = \\sum_{i=1}^{k} \\frac{1}{r_i + c} \\]\n\n其中：\n- \\(r_i\\) 是第 \\(i\\) 路的结果在排序中的位置（从 1 开始计数）。\n- \\(c\\) 是平滑常数，用于避免分母为零的情况。\n\n资料中给出的例子中，\\(c\\) 的值为 60。因此，RRF 的计算方式是基于各路结果在排序中的位置，并通过平滑常数 \\(c\\) 进行调整。\n\n### 第二部分：平滑常数 \\(c\\) 的取值\n\n关于平滑常数 \\(c\\) 的具体取值，资料中没有直接给出。通常情况下，这个值的选择会根据具体的应用场景和数据特性来决定。在某些情况下，\\(c\\) 可以设置得较大，以减少对个别路径结果的过分影响。例如，在上述例子中，\\(c\\) 被设置为 60。\n\n总结来说，RRF 按名次而不是按分数融合是因为各路分数尺度不同，通过比较排序位置来解决这一问题。至于平滑常数 \\(c\\) 的取值，建议根据具体需求进行调整。",
+  "total_s": 13.86,
+  "model": "models/Qwen2.5-3B-Instruct",
+  "system": "ref",
+  "score": {
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2
+  }
+}

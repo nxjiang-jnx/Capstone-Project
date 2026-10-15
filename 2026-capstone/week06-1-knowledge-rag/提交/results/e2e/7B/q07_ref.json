@@ -1,0 +1,59 @@
+{
+  "task": "MCP 服务可以向应用暴露哪三类能力？各有什么用途？",
+  "memory_used": [],
+  "trace": [
+    {
+      "step": 1,
+      "raw": "为了回答您的问题，我将查询相关知识以获取关于 MCP 服务及其能力的信息。\n\n<tool_call>\n{\"name\": \"search_knowledge\", \"arguments\": {\"query\": \"MCP 服务可以向应用暴露哪三类能力？各有什么用途？\"}}\n</tool_call>",
+      "latency_s": 1.206,
+      "tool_calls": [
+        {
+          "name": "search_knowledge",
+          "arguments": {
+            "query": "MCP 服务可以向应用暴露哪三类能力？各有什么用途？"
+          }
+        }
+      ],
+      "observations": [
+        {
+          "name": "search_knowledge",
+          "result": [
+            {
+              "id": "w05-slides.md#33",
+              "text": " 页 3.2 服务可以暴露哪些能力\n\n动作、上下文资源和提示模板具有不同用途\n能力 | 用途 | 仓库场景中的概念例子\nTools | 可调用的操作 | 查询 Issue、搜索代码\nResources | 可读取的上下文资源 | 项目说明、指定文档内容\nPrompts | 可复用且可参数化的提示模板 | 按给定范围组织代码审查任务\n实际可用能力取决于 Host 与 Server 的支持，不要求每个服务同时提供三类。\n来源：MCP规范2026-07-28\n\n## 第 35 页 ",
+              "score": 0.6724
+            },
+            {
+              "id": "w05-slides.md#34",
+              "text": "服务同时提供三类。\n来源：MCP规范2026-07-28\n\n## 第 35 页 3.3 OpenHands 中的 MCP 接入\n\n应用发现服务能力，模型选择动作，服务执行并返回结果\n接入后的工作过程\nHost 发现服务提供的工具。 把能力描述提供给模型。 把选中的调用交给服务。 把返回结果交回模型。\n公开项目例子\nOpenHands 可接入 fetch 服务， 读取已知 URL 的内容。  GitHub MCP Server 提供仓库、 Issue 等相关能力。\nMCP 统一",
+              "score": 0.6403
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "raw": "根据查询到的信息，MCP 服务可以向应用暴露以下三类能力：\n\n1. **Tools（工具）**：这类能力代表可调用的操作，例如查询 Issue、搜索代码等。\n2. **Resources（资源）**：这类能力表示可读取的上下文资源，如项目说明、指定文档内容等。\n3. **Prompts（提示模板）**：这类能力是可复用且可参数化的提示模板，例如按给定范围组织代码审查任务等。\n\n这些能力的具体用途如下：\n- **Tools**：用于执行特定操作或任务，如查询或搜索功能。\n- **Resources**：提供可读取的数据或信息，帮助应用更好地理解和使用相关资源。\n- **Prompts**：提供可定制的模板，以便在特定情况下生成或修改内容，如代码审查任务的组织。\n\n请注意，实际可用的能力取决于 MCP 服务端的支持情况，并非所有服务都必须同时提供这三类能力。",
+      "latency_s": 4.183,
+      "tool_calls": []
+    }
+  ],
+  "status": "ok",
+  "answer": "根据查询到的信息，MCP 服务可以向应用暴露以下三类能力：\n\n1. **Tools（工具）**：这类能力代表可调用的操作，例如查询 Issue、搜索代码等。\n2. **Resources（资源）**：这类能力表示可读取的上下文资源，如项目说明、指定文档内容等。\n3. **Prompts（提示模板）**：这类能力是可复用且可参数化的提示模板，例如按给定范围组织代码审查任务等。\n\n这些能力的具体用途如下：\n- **Tools**：用于执行特定操作或任务，如查询或搜索功能。\n- **Resources**：提供可读取的数据或信息，帮助应用更好地理解和使用相关资源。\n- **Prompts**：提供可定制的模板，以便在特定情况下生成或修改内容，如代码审查任务的组织。\n\n请注意，实际可用的能力取决于 MCP 服务端的支持情况，并非所有服务都必须同时提供这三类能力。",
+  "total_s": 5.4,
+  "model": "models/Qwen2.5-7B-Instruct",
+  "system": "ref",
+  "score": {
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2
+  }
+}

@@ -1,0 +1,681 @@
+[
+  {
+    "qid": "q02",
+    "system": "ref",
+    "status": "ok",
+    "points": "2/4",
+    "all_points": false,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": false,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 17.23
+  },
+  {
+    "qid": "q02",
+    "system": "mine-base",
+    "status": "ok",
+    "points": "1/4",
+    "all_points": false,
+    "cited": [
+      "w03-slides#12"
+    ],
+    "invalid_cites": [
+      "w03-slides#12"
+    ],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": false,
+    "tool_calls": 0,
+    "steps": 1,
+    "total_s": 1.81
+  },
+  {
+    "qid": "q02",
+    "system": "mine-nocheck",
+    "status": "ok",
+    "points": "1/4",
+    "all_points": false,
+    "cited": [
+      "w03-slides#12"
+    ],
+    "invalid_cites": [
+      "w03-slides#12"
+    ],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": false,
+    "tool_calls": 0,
+    "steps": 1,
+    "total_s": 1.84
+  },
+  {
+    "qid": "q02",
+    "system": "mine",
+    "status": "ok",
+    "points": "4/4",
+    "all_points": true,
+    "cited": [
+      "w03-slides#89",
+      "w03-slides#68",
+      "w03-slides#67",
+      "w03-slides#44"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 3,
+    "total_s": 9.98
+  },
+  {
+    "qid": "q04",
+    "system": "ref",
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [
+      "w06-slides-rag.md#18"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 6.05
+  },
+  {
+    "qid": "q04",
+    "system": "mine-base",
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [
+      "w06-slides-rag#16"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 5.72
+  },
+  {
+    "qid": "q04",
+    "system": "mine-nocheck",
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [
+      "w06-slides-rag#16"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 6.96
+  },
+  {
+    "qid": "q04",
+    "system": "mine",
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [
+      "w06-slides-rag#16"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 6.92
+  },
+  {
+    "qid": "q07",
+    "system": "ref",
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 5.4
+  },
+  {
+    "qid": "q07",
+    "system": "mine-base",
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 4.84
+  },
+  {
+    "qid": "q07",
+    "system": "mine-nocheck",
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 4.47
+  },
+  {
+    "qid": "q07",
+    "system": "mine",
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [
+      "w05-slides#34"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 3,
+    "total_s": 9.33
+  },
+  {
+    "qid": "q14",
+    "system": "ref",
+    "status": "ok",
+    "points": "1/4",
+    "all_points": false,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": false,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 3.91
+  },
+  {
+    "qid": "q14",
+    "system": "mine-base",
+    "status": "ok",
+    "points": "0/4",
+    "all_points": false,
+    "cited": [
+      "w06-assignment#4"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": false,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 3.44
+  },
+  {
+    "qid": "q14",
+    "system": "mine-nocheck",
+    "status": "ok",
+    "points": "4/4",
+    "all_points": true,
+    "cited": [
+      "w06-assignment#3"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 4.19
+  },
+  {
+    "qid": "q14",
+    "system": "mine",
+    "status": "ok",
+    "points": "4/4",
+    "all_points": true,
+    "cited": [
+      "w06-assignment#3"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 4.23
+  },
+  {
+    "qid": "q16",
+    "system": "ref",
+    "status": "ok",
+    "points": "2/2",
+    "all_points": true,
+    "cited": [
+      "dgx-login.md#1"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 1.58
+  },
+  {
+    "qid": "q16",
+    "system": "mine-base",
+    "status": "ok",
+    "points": "2/2",
+    "all_points": true,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 2.74
+  },
+  {
+    "qid": "q16",
+    "system": "mine-nocheck",
+    "status": "ok",
+    "points": "2/2",
+    "all_points": true,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 2.72
+  },
+  {
+    "qid": "q16",
+    "system": "mine",
+    "status": "ok",
+    "points": "2/2",
+    "all_points": true,
+    "cited": [
+      "dgx-login#2"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 3,
+    "total_s": 4.91
+  },
+  {
+    "qid": "q18",
+    "system": "ref",
+    "status": "ok",
+    "points": "0/2",
+    "all_points": false,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": false,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 5.47
+  },
+  {
+    "qid": "q18",
+    "system": "mine-base",
+    "status": "ok",
+    "points": "1/2",
+    "all_points": false,
+    "cited": [
+      "w06-slides-serving#20",
+      "w06-readme-serving#29",
+      "w06-readme-serving#28",
+      "w06-readme-serving#8"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 8.43
+  },
+  {
+    "qid": "q18",
+    "system": "mine-nocheck",
+    "status": "ok",
+    "points": "2/2",
+    "all_points": true,
+    "cited": [
+      "w06-slides-serving#20",
+      "w06-readme-serving#24",
+      "w06-readme-serving#28",
+      "w06-readme-serving#13"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 6.92
+  },
+  {
+    "qid": "q18",
+    "system": "mine",
+    "status": "ok",
+    "points": "2/2",
+    "all_points": true,
+    "cited": [
+      "w06-slides-serving#20",
+      "w06-readme-serving#24",
+      "w06-readme-serving#28",
+      "w06-readme-serving#13"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 6.89
+  },
+  {
+    "qid": "q20",
+    "system": "ref",
+    "status": "error",
+    "points": "0/3",
+    "all_points": false,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": false,
+    "tool_calls": 1,
+    "steps": 1,
+    "total_s": 1.2
+  },
+  {
+    "qid": "q20",
+    "system": "mine-base",
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [
+      "my-w02-report#10",
+      "my-w02-report#13",
+      "my-w02-report#9",
+      "my-w02-report#12"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 5.45
+  },
+  {
+    "qid": "q20",
+    "system": "mine-nocheck",
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [
+      "my-w02-report#10"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 4.86
+  },
+  {
+    "qid": "q20",
+    "system": "mine",
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [
+      "my-w02-report#10"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 4.93
+  },
+  {
+    "qid": "q22",
+    "system": "ref",
+    "status": "ok",
+    "points": "0/2",
+    "all_points": false,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": false,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 5.24
+  },
+  {
+    "qid": "q22",
+    "system": "mine-base",
+    "status": "ok",
+    "points": "2/2",
+    "all_points": true,
+    "cited": [
+      "my-w03-report#12",
+      "my-w03-report#20"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 5.95
+  },
+  {
+    "qid": "q22",
+    "system": "mine-nocheck",
+    "status": "ok",
+    "points": "2/2",
+    "all_points": true,
+    "cited": [
+      "my-w03-report#12",
+      "my-w03-report#13"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 4.9
+  },
+  {
+    "qid": "q22",
+    "system": "mine",
+    "status": "ok",
+    "points": "2/2",
+    "all_points": true,
+    "cited": [
+      "my-w03-report#12",
+      "my-w03-report#13"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 4.81
+  },
+  {
+    "qid": "q23",
+    "system": "ref",
+    "status": "ok",
+    "points": "0/1",
+    "all_points": false,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": false,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 3.22
+  },
+  {
+    "qid": "q23",
+    "system": "mine-base",
+    "status": "ok",
+    "points": "1/1",
+    "all_points": true,
+    "cited": [
+      "w06-assignment#4"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 1.8
+  },
+  {
+    "qid": "q23",
+    "system": "mine-nocheck",
+    "status": "ok",
+    "points": "1/1",
+    "all_points": true,
+    "cited": [
+      "w06-assignment#4"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 1.86
+  },
+  {
+    "qid": "q23",
+    "system": "mine",
+    "status": "ok",
+    "points": "1/1",
+    "all_points": true,
+    "cited": [
+      "w06-assignment#4"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 1.94
+  },
+  {
+    "qid": "q24",
+    "system": "ref",
+    "status": "ok",
+    "points": "1/1",
+    "all_points": true,
+    "cited": [
+      "dgx-login.md#2",
+      "dgx-login.md#6"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 4.81
+  },
+  {
+    "qid": "q24",
+    "system": "mine-base",
+    "status": "ok",
+    "points": "1/1",
+    "all_points": true,
+    "cited": [
+      "dgx-login#4"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 3.04
+  },
+  {
+    "qid": "q24",
+    "system": "mine-nocheck",
+    "status": "ok",
+    "points": "1/1",
+    "all_points": true,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2,
+    "total_s": 3.82
+  },
+  {
+    "qid": "q24",
+    "system": "mine",
+    "status": "ok",
+    "points": "1/1",
+    "all_points": true,
+    "cited": [
+      "dgx-login#4"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 3,
+    "total_s": 6.93
+  }
+]

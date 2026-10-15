@@ -1,0 +1,100 @@
+{
+  "task": "MCP 服务可以向应用暴露哪三类能力？各有什么用途？",
+  "memory_used": {
+    "preferences": [],
+    "facts": []
+  },
+  "trace": [
+    {
+      "step": 1,
+      "raw": "我们将通过搜索知识库来了解MCP服务可以向应用暴露的三类能力及其用途。\n<tool_call>\n{\"name\": \"search_knowledge\", \"arguments\": {\"query\": \"MCP 服务 能力 用途\", \"scope\": \"\"}}\n</tool_call>",
+      "latency_s": 1.451,
+      "tool_calls": [
+        {
+          "name": "search_knowledge",
+          "arguments": {
+            "query": "MCP 服务 能力 用途",
+            "scope": ""
+          }
+        }
+      ],
+      "observations": [
+        {
+          "name": "search_knowledge",
+          "arguments": {
+            "query": "MCP 服务 能力 用途",
+            "scope": ""
+          },
+          "result": [
+            {
+              "id": "w05-slides#34",
+              "title": "第五周课件：Agent Memory、Tool 与 MCP › 第 34 页 3.2 服务可以暴露哪些能力",
+              "text": "动作、上下文资源和提示模板具有不同用途\n能力 | 用途 | 仓库场景中的概念例子\nTools | 可调用的操作 | 查询 Issue、搜索代码\nResources | 可读取的上下文资源 | 项目说明、指定文档内容\nPrompts | 可复用且可参数化的提示模板 | 按给定范围组织代码审查任务\n实际可用能力取决于 Host 与 Server 的支持，不要求每个服务同时提供三类。\n来源：MCP规范2026-07-28",
+              "score": 0.0328
+            },
+            {
+              "id": "w05-slides#35",
+              "title": "第五周课件：Agent Memory、Tool 与 MCP › 第 35 页 3.3 OpenHands 中的 MCP 接入",
+              "text": "应用发现服务能力，模型选择动作，服务执行并返回结果\n接入后的工作过程\nHost 发现服务提供的工具。 把能力描述提供给模型。 把选中的调用交给服务。 把返回结果交回模型。\n公开项目例子\nOpenHands 可接入 fetch 服务， 读取已知 URL 的内容。  GitHub MCP Server 提供仓库、 Issue 等相关能力。\nMCP 统一连接方式，让外部能力进入 Agent 的工具体系， 而如何选择工具、组织上下文和判断任务是否完成，即任务策略与执行控制仍由 Agent 负责。\n来源：OpenHands MCP指南；GitHub MCP Server；MCP架构",
+              "score": 0.032
+            },
+            {
+              "id": "w05-slides#33",
+              "title": "第五周课件：Agent Memory、Tool 与 MCP › 第 33 页 3.1 MCP 的连接架构",
+              "text": "连接逻辑在应用中，具体能力由服务提供\nHost 管理交互与执行控制；Client 负责协议交互；Server 暴露能力。\n来源：Hugging Face MCP 架构图；MCP架构",
+              "score": 0.032
+            },
+            {
+              "id": "w05-slides#32",
+              "title": "第五周课件：Agent Memory、Tool 与 MCP › 第 32 页 3.1 MCP：多服务接入的共同协议",
+              "text": "同一个编码应用，可能需要接入许多外部服务\n一个代码审查任务\n读取仓库中的 Issue， 查内部文档， 再获取持续集成的执行结果。 如果每个应用都分别实现一套接入方式，适配工作会重复。\nMCP：Model Context Protocol\n服务按共同协议暴露能力， 应用发现并调用这些能力。  模型仍通过工具描述提出动作， 应用控制实际调用。\nFunction Calling 负责表达调用意图，MCP 支持应用连接外部服务。\n来源：MCP规范2026-07-28；MCP架构",
+              "score": 0.0312
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "raw": "根据搜索到的知识库片段，MCP服务可以向应用暴露三种能力：工具、上下文资源和提示模板。它们各自有不同的用途：\n\n- **工具**：用于可调用的操作，比如查询Issue、搜索代码等。\n- **上下文资源**：包括项目说明、指定文档内容等。\n- **提示模板**：用于可复用且可参数化的提示模板，比如按给定范围组织代码审查任务。\n\n这些能力的实际可用性取决于主机与服务器的支持，不一定每个服务都需要提供这三类能力。在实际应用中，应用会发现这些服务能力，模型会选择相应的动作，服务执行并返回结果。MCP通过统一连接方式，让外部能力进入Agent的工具体系，但任务策略与执行控制仍然由Agent负责。",
+      "latency_s": 4.39,
+      "tool_calls": []
+    }
+  ],
+  "status": "ok",
+  "answer": "根据搜索到的知识库片段，MCP服务可以向应用暴露三种能力：工具、上下文资源和提示模板。它们各自有不同的用途：\n\n- **工具**：用于可调用的操作，比如查询Issue、搜索代码等。\n- **上下文资源**：包括项目说明、指定文档内容等。\n- **提示模板**：用于可复用且可参数化的提示模板，比如按给定范围组织代码审查任务。\n\n这些能力的实际可用性取决于主机与服务器的支持，不一定每个服务都需要提供这三类能力。在实际应用中，应用会发现这些服务能力，模型会选择相应的动作，服务执行并返回结果。MCP通过统一连接方式，让外部能力进入Agent的工具体系，但任务策略与执行控制仍然由Agent负责。",
+  "citation_checks": [
+    {
+      "cited": [],
+      "invalid": [],
+      "urls": [],
+      "problems": [
+        "回答中没有任何有效的片段 id 引用"
+      ],
+      "passed": false,
+      "step": 2
+    }
+  ],
+  "citations_valid": false,
+  "retrieved_ids": [
+    "w05-slides#32",
+    "w05-slides#33",
+    "w05-slides#34",
+    "w05-slides#35"
+  ],
+  "total_s": 5.85,
+  "model": "models/Qwen2.5-3B-Instruct",
+  "system": "mine-nocheck",
+  "score": {
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [],
+    "invalid_cites": [],
+    "has_valid_cite": false,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2
+  }
+}

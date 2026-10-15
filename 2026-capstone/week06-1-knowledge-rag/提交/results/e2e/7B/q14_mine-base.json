@@ -1,0 +1,102 @@
+{
+  "task": "第六周 Agent v1 作业需要提交哪些内容？",
+  "memory_used": {
+    "preferences": [],
+    "facts": []
+  },
+  "trace": [
+    {
+      "step": 1,
+      "raw": "<tool_call>\n{\"name\": \"search_knowledge\", \"arguments\": {\"query\": \"第六周 Agent v1 作业\", \"scope\": \"w06\"}}\n</tool_call>",
+      "latency_s": 0.771,
+      "tool_calls": [
+        {
+          "name": "search_knowledge",
+          "arguments": {
+            "query": "第六周 Agent v1 作业",
+            "scope": "w06"
+          }
+        }
+      ],
+      "observations": [
+        {
+          "name": "search_knowledge",
+          "arguments": {
+            "query": "第六周 Agent v1 作业",
+            "scope": "w06"
+          },
+          "result": [
+            {
+              "id": "w06-assignment#4",
+              "title": "第六周作业要求：完成 Agent v1 › 提交方式",
+              "text": "截止时间与提交入口以课程通知为准。\n\n返回本次课程",
+              "score": 0.0328
+            },
+            {
+              "id": "w06-slides-rag#43",
+              "title": "第六周第 1 次课课件：Knowledge 与 RAG › 第 43 页 课后作业：完成 Agent v1",
+              "text": "在现有项目中接入 Memory、Tool 与小型知识库\nMemory\n能够保存并复用有用的交互信息。\n至少 2 种 Tool\n让 Agent 实际调用工具，完成任务。\n小型知识库\n建立可检索的资料集合，并在回答中给出可核对的来源。\n围绕同一个应用场景集成以上能力。",
+              "score": 0.0315
+            },
+            {
+              "id": "w06-assignment#1",
+              "title": "第六周作业要求：完成 Agent v1 › 实践目标",
+              "text": "尝试为自己的 Agent 接入 **Memory、至少两种 Tool 和一个小型知识库**，探索它们可以帮助 Agent 完成什么任务。\n\n**提供的参考代码只是一个非常简单的示例，用于帮助理解基本流程。** 可以在此基础上按自己的想法做各种修改和拓展，也可以继续已有项目，或独立设计实现，不必依托这份参考代码。\n\n应用场景、资料、工具和实现方式可以自行选择。不要求采用与参考示例相同的模型、框架、记忆方式或检索流程，鼓励自由尝试。",
+              "score": 0.0313
+            },
+            {
+              "id": "w06-assignment#2",
+              "title": "第六周作业要求：完成 Agent v1 › 可以尝试的方向",
+              "text": "- 换成自己的课程资料、实验说明或项目文档，让助手处理实际问题。\n- 添加有用的工具，或者调整 Agent 使用工具的方式。\n- 尝试保存、更新或选择记忆，观察它怎样影响后续交互。\n- 调整资料切分、检索或回答方式，比较实际表现。\n\n以上仅用于启发思路，可以选择其他方向。不规定拓展数量、统一测试场景、资料规模、成功率或展示效果。",
+              "score": 0.0312
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "raw": "根据第六周的作业要求，你需要完成以下内容：\n\n- 在现有项目中接入 Memory、至少两种 Tool 和一个小型知识库。\n- Memory 需要能够保存并复用有用的交互信息。\n- 至少 2 种 Tool 让 Agent 实际调用工具，完成任务。\n- 小型知识库需要建立可检索的资料集合，并在回答中给出可核对的来源。\n- 围绕同一个应用场景集成以上能力。\n\n具体提交方式和截止时间请以课程通知为准。[w06-assignment#4]",
+      "latency_s": 2.659,
+      "tool_calls": []
+    }
+  ],
+  "status": "ok",
+  "answer": "根据第六周的作业要求，你需要完成以下内容：\n\n- 在现有项目中接入 Memory、至少两种 Tool 和一个小型知识库。\n- Memory 需要能够保存并复用有用的交互信息。\n- 至少 2 种 Tool 让 Agent 实际调用工具，完成任务。\n- 小型知识库需要建立可检索的资料集合，并在回答中给出可核对的来源。\n- 围绕同一个应用场景集成以上能力。\n\n具体提交方式和截止时间请以课程通知为准。[w06-assignment#4]",
+  "citation_checks": [
+    {
+      "cited": [
+        "w06-assignment#4"
+      ],
+      "invalid": [],
+      "urls": [],
+      "problems": [],
+      "passed": true,
+      "step": 2
+    }
+  ],
+  "citations_valid": true,
+  "retrieved_ids": [
+    "w06-assignment#1",
+    "w06-assignment#2",
+    "w06-assignment#4",
+    "w06-slides-rag#43"
+  ],
+  "total_s": 3.44,
+  "model": "models/Qwen2.5-7B-Instruct",
+  "system": "mine-base",
+  "score": {
+    "status": "ok",
+    "points": "0/4",
+    "all_points": false,
+    "cited": [
+      "w06-assignment#4"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": false,
+    "tool_calls": 1,
+    "steps": 2
+  }
+}

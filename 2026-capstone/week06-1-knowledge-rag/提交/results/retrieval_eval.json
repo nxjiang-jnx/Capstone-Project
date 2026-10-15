@@ -1,0 +1,906 @@
+{
+  "summary": [
+    {
+      "config": "参考实现：字符窗口 240 + 向量",
+      "chunks": 760,
+      "avg_chars": 237,
+      "hit@1": 0.3333333333333333,
+      "hit@2": 0.4583333333333333,
+      "hit@4": 0.5,
+      "mrr@10": 0.43194444444444446,
+      "unreachable": []
+    },
+    {
+      "config": "字符窗口 240 + 混合",
+      "chunks": 760,
+      "avg_chars": 237,
+      "hit@1": 0.4583333333333333,
+      "hit@2": 0.5416666666666666,
+      "hit@4": 0.6666666666666666,
+      "mrr@10": 0.5666666666666667,
+      "unreachable": []
+    },
+    {
+      "config": "标题/页切分 + 向量",
+      "chunks": 554,
+      "avg_chars": 266,
+      "hit@1": 0.5416666666666666,
+      "hit@2": 0.6666666666666666,
+      "hit@4": 0.6666666666666666,
+      "mrr@10": 0.6194444444444445,
+      "unreachable": []
+    },
+    {
+      "config": "标题/页切分 + BM25",
+      "chunks": 554,
+      "avg_chars": 266,
+      "hit@1": 0.5416666666666666,
+      "hit@2": 0.7916666666666666,
+      "hit@4": 0.875,
+      "mrr@10": 0.7062499999999999,
+      "unreachable": []
+    },
+    {
+      "config": "标题/页切分 + 混合(RRF)",
+      "chunks": 554,
+      "avg_chars": 266,
+      "hit@1": 0.5416666666666666,
+      "hit@2": 0.7083333333333334,
+      "hit@4": 0.875,
+      "mrr@10": 0.6770833333333334,
+      "unreachable": []
+    }
+  ],
+  "per_question": {
+    "参考实现：字符窗口 240 + 向量": {
+      "q01": {
+        "rank": null,
+        "top2": [
+          "w03-slides#3",
+          "w03-slides#170"
+        ]
+      },
+      "q02": {
+        "rank": null,
+        "top2": [
+          "w03-slides#67",
+          "w05-slides#26"
+        ]
+      },
+      "q03": {
+        "rank": 6,
+        "top2": [
+          "w06-slides-rag#2",
+          "w05-slides#36"
+        ]
+      },
+      "q04": {
+        "rank": 1,
+        "top2": [
+          "w06-slides-rag#18",
+          "w01-slides#45"
+        ]
+      },
+      "q05": {
+        "rank": null,
+        "top2": [
+          "w05-readme#2",
+          "w06-readme-rag#2"
+        ]
+      },
+      "q06": {
+        "rank": 1,
+        "top2": [
+          "w06-slides-rag#11",
+          "w06-slides-rag#10"
+        ]
+      },
+      "q07": {
+        "rank": 1,
+        "top2": [
+          "w05-slides#33",
+          "w05-slides#34"
+        ]
+      },
+      "q08": {
+        "rank": 2,
+        "top2": [
+          "w06-readme-rag#1",
+          "w05-readme#1"
+        ]
+      },
+      "q09": {
+        "rank": 2,
+        "top2": [
+          "my-w01-report#4",
+          "w01-slides#66"
+        ]
+      },
+      "q10": {
+        "rank": 6,
+        "top2": [
+          "w02-slides-structured#16",
+          "w02-slides-app#5"
+        ]
+      },
+      "q11": {
+        "rank": 1,
+        "top2": [
+          "w06-slides-rag#31",
+          "w06-slides-rag#40"
+        ]
+      },
+      "q12": {
+        "rank": null,
+        "top2": [
+          "w01-assignment#4",
+          "my-w01-report#1"
+        ]
+      },
+      "q13": {
+        "rank": 1,
+        "top2": [
+          "w03-assignment#2",
+          "w03-assignment#1"
+        ]
+      },
+      "q14": {
+        "rank": null,
+        "top2": [
+          "w06-assignment#1",
+          "my-w01-report#1"
+        ]
+      },
+      "q15": {
+        "rank": null,
+        "top2": [
+          "w06-slides-rag#52",
+          "w03-slides#97"
+        ]
+      },
+      "q16": {
+        "rank": 1,
+        "top2": [
+          "dgx-login#1",
+          "w06-readme-serving#30"
+        ]
+      },
+      "q17": {
+        "rank": 1,
+        "top2": [
+          "dgx-login#14",
+          "w06-slides-serving#7"
+        ]
+      },
+      "q18": {
+        "rank": 3,
+        "top2": [
+          "w06-slides-serving#32",
+          "w06-readme-serving#36"
+        ]
+      },
+      "q19": {
+        "rank": null,
+        "top2": [
+          "w01-assignment#1",
+          "w06-slides-serving#24"
+        ]
+      },
+      "q20": {
+        "rank": 1,
+        "top2": [
+          "my-w02-report#13",
+          "my-w02-report#17"
+        ]
+      },
+      "q21": {
+        "rank": null,
+        "top2": [
+          "my-w03-report#20",
+          "w03-readme#1"
+        ]
+      },
+      "q22": {
+        "rank": 5,
+        "top2": [
+          "w03-slides#66",
+          "my-w03-report#30"
+        ]
+      },
+      "q23": {
+        "rank": null,
+        "top2": [
+          "w06-assignment#1",
+          "my-w01-report#1"
+        ]
+      },
+      "q24": {
+        "rank": 2,
+        "top2": [
+          "dgx-login#6",
+          "dgx-login#2"
+        ]
+      }
+    },
+    "字符窗口 240 + 混合": {
+      "q01": {
+        "rank": 5,
+        "top2": [
+          "w03-slides#3",
+          "w03-slides#170"
+        ]
+      },
+      "q02": {
+        "rank": 2,
+        "top2": [
+          "w03-slides#67",
+          "w03-slides#128"
+        ]
+      },
+      "q03": {
+        "rank": 1,
+        "top2": [
+          "w03-slides#14",
+          "w03-slides#93"
+        ]
+      },
+      "q04": {
+        "rank": 1,
+        "top2": [
+          "w06-slides-rag#18",
+          "w06-slides-rag#17"
+        ]
+      },
+      "q05": {
+        "rank": null,
+        "top2": [
+          "w05-readme#3",
+          "w03-slides#93"
+        ]
+      },
+      "q06": {
+        "rank": 1,
+        "top2": [
+          "w06-slides-rag#11",
+          "w06-slides-rag#10"
+        ]
+      },
+      "q07": {
+        "rank": 1,
+        "top2": [
+          "w05-slides#33",
+          "w05-slides#32"
+        ]
+      },
+      "q08": {
+        "rank": 1,
+        "top2": [
+          "w05-readme#1",
+          "w06-readme-rag#1"
+        ]
+      },
+      "q09": {
+        "rank": 3,
+        "top2": [
+          "my-w01-report#4",
+          "my-w01-report#3"
+        ]
+      },
+      "q10": {
+        "rank": 1,
+        "top2": [
+          "w02-slides-structured#2",
+          "w02-slides-structured#16"
+        ]
+      },
+      "q11": {
+        "rank": 1,
+        "top2": [
+          "w06-slides-rag#31",
+          "w06-slides-rag#32"
+        ]
+      },
+      "q12": {
+        "rank": 5,
+        "top2": [
+          "w01-assignment#4",
+          "my-w01-report#1"
+        ]
+      },
+      "q13": {
+        "rank": 2,
+        "top2": [
+          "w03-assignment#1",
+          "w03-assignment#2"
+        ]
+      },
+      "q14": {
+        "rank": null,
+        "top2": [
+          "w06-assignment#1",
+          "w06-readme-rag#1"
+        ]
+      },
+      "q15": {
+        "rank": null,
+        "top2": [
+          "w06-assignment#1",
+          "w03-slides#97"
+        ]
+      },
+      "q16": {
+        "rank": 1,
+        "top2": [
+          "dgx-login#1",
+          "w06-readme-serving#30"
+        ]
+      },
+      "q17": {
+        "rank": 1,
+        "top2": [
+          "dgx-login#14",
+          "w06-slides-serving#9"
+        ]
+      },
+      "q18": {
+        "rank": 3,
+        "top2": [
+          "w06-slides-serving#32",
+          "w06-readme-serving#36"
+        ]
+      },
+      "q19": {
+        "rank": null,
+        "top2": [
+          "w01-assignment#1",
+          "w01-assignment#5"
+        ]
+      },
+      "q20": {
+        "rank": 1,
+        "top2": [
+          "my-w02-report#13",
+          "my-w02-report#17"
+        ]
+      },
+      "q21": {
+        "rank": null,
+        "top2": [
+          "w03-readme#1",
+          "my-w03-report#1"
+        ]
+      },
+      "q22": {
+        "rank": 5,
+        "top2": [
+          "my-w03-report#1",
+          "w03-readme#1"
+        ]
+      },
+      "q23": {
+        "rank": 3,
+        "top2": [
+          "w06-assignment#1",
+          "w06-readme-rag#1"
+        ]
+      },
+      "q24": {
+        "rank": 1,
+        "top2": [
+          "dgx-login#2",
+          "dgx-login#6"
+        ]
+      }
+    },
+    "标题/页切分 + 向量": {
+      "q01": {
+        "rank": 1,
+        "top2": [
+          "w03-slides#118",
+          "w03-slides#119"
+        ]
+      },
+      "q02": {
+        "rank": 6,
+        "top2": [
+          "w06-slides-rag#31",
+          "w03-assignment#2"
+        ]
+      },
+      "q03": {
+        "rank": null,
+        "top2": [
+          "w06-slides-rag#3",
+          "w05-slides#13"
+        ]
+      },
+      "q04": {
+        "rank": 1,
+        "top2": [
+          "w06-slides-rag#16",
+          "w06-slides-rag#15"
+        ]
+      },
+      "q05": {
+        "rank": null,
+        "top2": [
+          "w06-readme-rag#2",
+          "w06-slides-rag#40"
+        ]
+      },
+      "q06": {
+        "rank": 1,
+        "top2": [
+          "w06-slides-rag#10",
+          "w06-slides-rag#5"
+        ]
+      },
+      "q07": {
+        "rank": 1,
+        "top2": [
+          "w05-slides#34",
+          "w02-slides-app#18"
+        ]
+      },
+      "q08": {
+        "rank": 2,
+        "top2": [
+          "w05-slides#1",
+          "w05-readme#2"
+        ]
+      },
+      "q09": {
+        "rank": 1,
+        "top2": [
+          "w01-slides#53",
+          "my-w01-report#4"
+        ]
+      },
+      "q10": {
+        "rank": null,
+        "top2": [
+          "w02-slides-structured#12",
+          "w02-slides-app#6"
+        ]
+      },
+      "q11": {
+        "rank": 1,
+        "top2": [
+          "w06-slides-rag#26",
+          "w06-slides-rag#35"
+        ]
+      },
+      "q12": {
+        "rank": null,
+        "top2": [
+          "w03-assignment#3",
+          "w03-readme#1"
+        ]
+      },
+      "q13": {
+        "rank": 1,
+        "top2": [
+          "w03-assignment#1",
+          "w03-assignment#3"
+        ]
+      },
+      "q14": {
+        "rank": 2,
+        "top2": [
+          "w06-assignment#4",
+          "w06-assignment#3"
+        ]
+      },
+      "q15": {
+        "rank": null,
+        "top2": [
+          "w06-slides-rag#43",
+          "w06-assignment#1"
+        ]
+      },
+      "q16": {
+        "rank": 1,
+        "top2": [
+          "dgx-login#3",
+          "dgx-login#1"
+        ]
+      },
+      "q17": {
+        "rank": 1,
+        "top2": [
+          "dgx-login#10",
+          "w06-slides-serving#6"
+        ]
+      },
+      "q18": {
+        "rank": 2,
+        "top2": [
+          "w06-slides-serving#20",
+          "w06-readme-serving#28"
+        ]
+      },
+      "q19": {
+        "rank": null,
+        "top2": [
+          "my-w01-report#5",
+          "w01-slides#3"
+        ]
+      },
+      "q20": {
+        "rank": 1,
+        "top2": [
+          "my-w02-report#10",
+          "my-w02-report#13"
+        ]
+      },
+      "q21": {
+        "rank": 5,
+        "top2": [
+          "my-w03-report#14",
+          "w03-readme#1"
+        ]
+      },
+      "q22": {
+        "rank": 1,
+        "top2": [
+          "my-w03-report#13",
+          "my-w03-report#6"
+        ]
+      },
+      "q23": {
+        "rank": 1,
+        "top2": [
+          "w06-assignment#4",
+          "w06-assignment#3"
+        ]
+      },
+      "q24": {
+        "rank": 1,
+        "top2": [
+          "dgx-login#4",
+          "dgx-login#7"
+        ]
+      }
+    },
+    "标题/页切分 + BM25": {
+      "q01": {
+        "rank": 1,
+        "top2": [
+          "w03-slides#118",
+          "w03-slides#2"
+        ]
+      },
+      "q02": {
+        "rank": 1,
+        "top2": [
+          "w03-slides#89",
+          "w03-slides#44"
+        ]
+      },
+      "q03": {
+        "rank": 2,
+        "top2": [
+          "w03-slides#91",
+          "w03-slides#6"
+        ]
+      },
+      "q04": {
+        "rank": 1,
+        "top2": [
+          "w06-slides-rag#16",
+          "w06-slides-rag#14"
+        ]
+      },
+      "q05": {
+        "rank": null,
+        "top2": [
+          "w05-readme#5",
+          "w06-slides-rag#41"
+        ]
+      },
+      "q06": {
+        "rank": 1,
+        "top2": [
+          "w06-slides-rag#10",
+          "w06-slides-rag#5"
+        ]
+      },
+      "q07": {
+        "rank": 1,
+        "top2": [
+          "w05-slides#34",
+          "w05-slides#33"
+        ]
+      },
+      "q08": {
+        "rank": 2,
+        "top2": [
+          "w05-slides#38",
+          "w05-readme#2"
+        ]
+      },
+      "q09": {
+        "rank": 4,
+        "top2": [
+          "w06-readme-serving#23",
+          "my-w01-report#4"
+        ]
+      },
+      "q10": {
+        "rank": 1,
+        "top2": [
+          "w02-slides-structured#2",
+          "w02-slides-structured#14"
+        ]
+      },
+      "q11": {
+        "rank": 1,
+        "top2": [
+          "w06-slides-rag#26",
+          "w06-slides-rag#39"
+        ]
+      },
+      "q12": {
+        "rank": 2,
+        "top2": [
+          "w03-assignment#1",
+          "w01-assignment#1"
+        ]
+      },
+      "q13": {
+        "rank": 1,
+        "top2": [
+          "w03-assignment#1",
+          "w03-assignment#5"
+        ]
+      },
+      "q14": {
+        "rank": 2,
+        "top2": [
+          "w06-assignment#4",
+          "w06-assignment#3"
+        ]
+      },
+      "q15": {
+        "rank": 1,
+        "top2": [
+          "w06-readme-rag#3",
+          "w06-assignment#1"
+        ]
+      },
+      "q16": {
+        "rank": 2,
+        "top2": [
+          "w06-readme-serving#2",
+          "dgx-login#2"
+        ]
+      },
+      "q17": {
+        "rank": 1,
+        "top2": [
+          "dgx-login#10",
+          "w06-readme-serving#2"
+        ]
+      },
+      "q18": {
+        "rank": 6,
+        "top2": [
+          "w06-readme-serving#24",
+          "w06-slides-serving#24"
+        ]
+      },
+      "q19": {
+        "rank": 3,
+        "top2": [
+          "w01-assignment#1",
+          "w01-assignment#3"
+        ]
+      },
+      "q20": {
+        "rank": 1,
+        "top2": [
+          "my-w02-report#10",
+          "my-w02-report#12"
+        ]
+      },
+      "q21": {
+        "rank": 2,
+        "top2": [
+          "my-w01-report#3",
+          "my-w03-report#10"
+        ]
+      },
+      "q22": {
+        "rank": 5,
+        "top2": [
+          "my-w03-report#6",
+          "w03-assignment#2"
+        ]
+      },
+      "q23": {
+        "rank": 1,
+        "top2": [
+          "w06-assignment#4",
+          "w03-assignment#7"
+        ]
+      },
+      "q24": {
+        "rank": 1,
+        "top2": [
+          "dgx-login#2",
+          "dgx-login#4"
+        ]
+      }
+    },
+    "标题/页切分 + 混合(RRF)": {
+      "q01": {
+        "rank": 1,
+        "top2": [
+          "w03-slides#118",
+          "w03-slides#119"
+        ]
+      },
+      "q02": {
+        "rank": 1,
+        "top2": [
+          "w03-slides#89",
+          "w03-slides#68"
+        ]
+      },
+      "q03": {
+        "rank": 2,
+        "top2": [
+          "w03-slides#10",
+          "w03-slides#6"
+        ]
+      },
+      "q04": {
+        "rank": 1,
+        "top2": [
+          "w06-slides-rag#16",
+          "w06-slides-rag#39"
+        ]
+      },
+      "q05": {
+        "rank": null,
+        "top2": [
+          "w06-assignment#2",
+          "w06-slides-rag#41"
+        ]
+      },
+      "q06": {
+        "rank": 1,
+        "top2": [
+          "w06-slides-rag#10",
+          "w06-slides-rag#5"
+        ]
+      },
+      "q07": {
+        "rank": 1,
+        "top2": [
+          "w05-slides#34",
+          "w05-slides#33"
+        ]
+      },
+      "q08": {
+        "rank": 1,
+        "top2": [
+          "w05-readme#2",
+          "w05-slides#11"
+        ]
+      },
+      "q09": {
+        "rank": 4,
+        "top2": [
+          "my-w01-report#4",
+          "my-w01-report#3"
+        ]
+      },
+      "q10": {
+        "rank": 4,
+        "top2": [
+          "w02-slides-structured#14",
+          "w03-slides#101"
+        ]
+      },
+      "q11": {
+        "rank": 1,
+        "top2": [
+          "w06-slides-rag#26",
+          "w06-slides-rag#39"
+        ]
+      },
+      "q12": {
+        "rank": 2,
+        "top2": [
+          "w01-assignment#3",
+          "w01-assignment#1"
+        ]
+      },
+      "q13": {
+        "rank": 1,
+        "top2": [
+          "w03-assignment#1",
+          "w03-assignment#2"
+        ]
+      },
+      "q14": {
+        "rank": 2,
+        "top2": [
+          "w06-assignment#4",
+          "w06-assignment#3"
+        ]
+      },
+      "q15": {
+        "rank": null,
+        "top2": [
+          "w06-assignment#1",
+          "w06-slides-rag#43"
+        ]
+      },
+      "q16": {
+        "rank": 1,
+        "top2": [
+          "dgx-login#9",
+          "dgx-login#2"
+        ]
+      },
+      "q17": {
+        "rank": 1,
+        "top2": [
+          "dgx-login#10",
+          "w06-slides-serving#6"
+        ]
+      },
+      "q18": {
+        "rank": 4,
+        "top2": [
+          "w06-readme-serving#24",
+          "w06-slides-serving#20"
+        ]
+      },
+      "q19": {
+        "rank": 6,
+        "top2": [
+          "w01-slides#3",
+          "my-w01-report#5"
+        ]
+      },
+      "q20": {
+        "rank": 1,
+        "top2": [
+          "my-w02-report#10",
+          "my-w02-report#13"
+        ]
+      },
+      "q21": {
+        "rank": 3,
+        "top2": [
+          "w03-assignment#3",
+          "my-w03-report#6"
+        ]
+      },
+      "q22": {
+        "rank": 2,
+        "top2": [
+          "my-w03-report#6",
+          "my-w03-report#13"
+        ]
+      },
+      "q23": {
+        "rank": 1,
+        "top2": [
+          "w06-assignment#4",
+          "w03-assignment#7"
+        ]
+      },
+      "q24": {
+        "rank": 1,
+        "top2": [
+          "dgx-login#4",
+          "dgx-login#2"
+        ]
+      }
+    }
+  }
+}

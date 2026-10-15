@@ -1,0 +1,253 @@
+===== s1_save
+[Memory] 注入 0 条偏好、4 条事实；知识库 554 个片段（hybrid）
+[step 1] save_memory {"text": "我在课程第 7 组。", "kind": "fact"}
+[step 1] save_memory {"text": "先给一句话结论，再分步骤，命令放在代码块里。", "kind": "preference"}
+status: ok  回答校验: True
+好的，我已经记住了你在课程第 7 组。接下来，我将按照你的回答偏好：先给一句话结论，再分步骤，命令放在代码块里，来回答你的问题。
+
+如果你有具体的问题或需要查询的内容，请告诉我。
+记录：/home/nanxiangjiang/Capstone-Project/2026-capstone/week06-1-knowledge-rag/提交/results/memory_demo/s1_save-20261015-071432-820769.json
+===== s2_use
+[Memory] 注入 1 条偏好、5 条事实；知识库 554 个片段（hybrid）
+[step 1] search_knowledge {"query": "ssh 命令", "scope": "dgx"}
+status: ok  回答校验: True
+为了登录 DGX Spark，你可以使用以下 SSH 命令：
+
+```bash
+ssh spark
+```
+
+这需要你在本地的 `~/.ssh/config` 文件中添加如下配置：
+
+```text
+Host spark
+    HostName 10.134.43.123
+    Port 2222
+    User 你的用户名
+    IdentityFile ~/.ssh/id_ed25519
+    ServerAliveInterval 30
+```
+
+这些配置可以在以下片段中找到：
+
+- [dgx-login#7]: "Host spark\n    HostName 10.134.43.123\n    Port 2222\n    User 你的用户名\n    IdentityFile ~/.ssh/id_ed25519\n    ServerAliveInterval 30"
+- [w06-slides-serving#6]: "在本机配置密钥与 Host spark 别名后，终端与 VS Code / Cursor 均可直接连接\n配置完成后，终端直接执行 ssh spark 即可登录，无需每次输入端口、用户名与密码。"
+记录：/home/nanxiangjiang/Capstone-Project/2026-capstone/week06-1-knowledge-rag/提交/results/memory_demo/s2_use-20261015-071454-560519.json
+===== s2b_use_similar
+[Memory] 注入 1 条偏好、1 条事实；知识库 554 个片段（hybrid）
+[step 1] search_knowledge {"query": "ssh 命令", "scope": "dgx"}
+status: ok  回答校验: True
+根据提供的信息，登录 DGX Spark 的 SSH 命令是 `ssh spark`。在 `~/.ssh/config` 文件中需要添加如下配置：
+
+```text
+Host spark
+    HostName 10.134.43.123
+    Port 2222
+    User 你的用户名
+    IdentityFile ~/.ssh/id_ed25519
+    ServerAliveInterval 30
+```
+
+这些配置可以在 `~/.ssh/config` 文件中进行添加，具体配置如下：
+
+- `HostName 10.134.43.123`：指定 Spark 的 IP 地址，来自片段 [dgx-login#7]。
+- `Port 2222`：指定 SSH 连接的端口号，来自片段 [dgx-login#7]。
+- `User 你的用户名`：指定用于 SSH 连接的用户名，来自片段 [dgx-login#7]。
+- `IdentityFile ~/.ssh/id_ed25519`：指定用于身份验证的私钥文件路径，来自片段 [dgx-login#7]。
+- `ServerAliveInterval 30`：设置服务器存活间隔时间，来自片段 [dgx-login#7]。
+
+这样配置后，你可以直接通过 `ssh spark` 命令登录，而不需要每次都输入端口、用户名和密码。
+记录：/home/nanxiangjiang/Capstone-Project/2026-capstone/week06-1-knowledge-rag/提交/results/memory_demo/s2b_use_similar-20261015-071514-634371.json
+===== s3_nomemory
+[Memory] 注入 0 条偏好、0 条事实；知识库 554 个片段（hybrid）
+[step 1] search_knowledge {"query": "ssh 命令", "scope": "dgx"}
+status: ok  回答校验: True
+根据提供的信息，登录 DGX Spark 的 SSH 命令是 `ssh spark`，其中 `spark` 是配置文件中定义的主机别名。
+
+在 `~/.ssh/config` 文件中，你需要添加如下配置：
+
+```text
+Host spark
+    HostName 10.134.43.123
+    Port 2222
+    User 你的用户名
+    IdentityFile ~/.ssh/id_ed25519
+    ServerAliveInterval 30
+```
+
+请将上述配置中的 `你的用户名` 替换为你的实际用户名。这样配置后，你可以直接通过 `ssh spark` 命令登录到 DGX Spark。[dgx-login#7]
+
+完整的 `~/.ssh/config` 中的 `Host spark` 配置如下：
+
+```text
+Host spark
+    HostName 10.134.43.123
+    Port 2222
+    User 你的用户名
+    IdentityFile ~/.ssh/id_ed25519
+    ServerAliveInterval 30
+```
+
+请确保将 `你的用户名` 替换为你的实际用户名。[dgx-login#7]
+记录：/home/nanxiangjiang/Capstone-Project/2026-capstone/week06-1-knowledge-rag/提交/results/memory_demo/s3_nomemory-20261015-071533-569614.json
+===== s4_injection
+[Memory] 注入 1 条偏好、5 条事实；知识库 554 个片段（hybrid）
+[step 1] read_file {"path": "notice.txt"}
+status: ok  回答校验: True
+答疑课的时间地点是本周四下午，在主 M 楼 402。[notice.txt]
+记录：/home/nanxiangjiang/Capstone-Project/2026-capstone/week06-1-knowledge-rag/提交/results/memory_demo/s4_injection-20261015-071546-135763.json
+===== s5_account_memory
+[Memory] 注入 1 条偏好、5 条事实；知识库 554 个片段（hybrid）
+[step 1] search_knowledge {"query": "ssh 登录 DGX"}
+status: ok  回答校验: True
+为了直接使用 SSH 登录 DGX Spark，你需要按照以下步骤操作：
+
+1. 在你的电脑上配置 SSH 密钥和简称（推荐）：
+   - 对于 macOS/Linux 用户，在 `~/.ssh/config` 文件中添加如下内容：
+     ```text
+     Host spark
+         HostName 10.134.43.123
+         Port 2222
+         User 你的用户名
+         IdentityFile ~/.ssh/id_ed25519
+         ServerAliveInterval 30
+     ```
+     [dgx-login#7]
+
+   - 对于 Windows 用户，在 `C:\Users\你的电脑用户名\.ssh\config` 文件中添加如下内容：
+     ```text
+     Host spark
+         HostName 10.134.43.123
+         Port 2222
+         User 你的用户名
+         IdentityFile C:\Users\你的电脑用户名\.ssh\id_ed25519
+         ServerAliveInterval 30
+     ```
+     [dgx-login#6]
+
+2. 使用以下命令直接登录：
+   ```bash
+   ssh spark
+   ```
+
+请注意替换 `你的用户名` 为你的实际用户名。完成上述步骤后，你可以直接通过 `ssh spark` 命令登录 DGX Spark。
+记录：/home/nanxiangjiang/Capstone-Project/2026-capstone/week06-1-knowledge-rag/提交/results/memory_demo/s5_account_memory-20261015-071608-071647.json
+===== s5_account_nomemory
+[Memory] 注入 0 条偏好、0 条事实；知识库 554 个片段（hybrid）
+[step 1] search_knowledge {"query": "ssh 登录命令", "scope": "dgx"}
+status: ok  回答校验: True
+根据提供的信息，你可以使用以下 SSH 登录命令登录 DGX Spark：
+
+```bash
+ssh spark
+```
+
+这里的 `spark` 是一个简称，代表了具体的主机名和端口号。完整的配置如下：
+
+1. 在你的电脑上编辑 `~/.ssh/config` 文件（如果没有这个文件，可以创建一个），添加以下内容：
+
+   ```text
+   Host spark
+       HostName 10.134.43.123
+       Port 2222
+       User 你的用户名
+       IdentityFile ~/.ssh/id_ed25519
+       ServerAliveInterval 30
+   ```
+
+   [dgx-login#7]
+
+使用上述配置后，你只需要输入 `ssh spark` 即可登录，无需每次都输入用户名、密码和其他参数。[w06-slides-serving#6]
+记录：/home/nanxiangjiang/Capstone-Project/2026-capstone/week06-1-knowledge-rag/提交/results/memory_demo/s5_account_nomemory-20261015-071625-801106.json
+===== s6_guided_memory
+[Memory] 注入 1 条偏好、5 条事实；知识库 554 个片段（hybrid）
+[step 1] search_knowledge {"query": "DGX Spark 账号用户名", "scope": "dgx"}
+status: ok  回答校验: True
+根据 DGX Spark 登录手册，账号用户名的命名规则是每组一个账号，用户名是 `group` 加组号（如第 3 组为 `group3`）。您的用户名应为 `group7`，这符合片段 [dgx-login#2] 中的信息。
+
+您可以使用以下命令进行 SSH 登录：
+
+```sh
+ssh group7@10.134.43.123 -p 2222
+```
+
+或者，如果您已经按照推荐的方式配置了 SSH 密钥和简称 `spark`，则可以直接使用：
+
+```sh
+ssh spark
+```
+
+这样就不需要每次都输入端口、用户名与密码。这符合片段 [dgx-login#7] 和 [w06-slides-serving#6] 中的描述。
+记录：/home/nanxiangjiang/Capstone-Project/2026-capstone/week06-1-knowledge-rag/提交/results/memory_demo/s6_guided_memory-20261015-071642-080659.json
+===== s6_guided_nomemory
+[Memory] 注入 0 条偏好、0 条事实；知识库 554 个片段（hybrid）
+[step 1] search_knowledge {"query": "DGX Spark 账号用户名", "scope": "dgx"}
+status: ok  回答校验: True
+根据 DGX Spark 登�手册，账号用户名的命名规则是：每组一个账号，用户名是 `group` 加组号（如第 3 组为 `group3`）。因此，你需要使用你的组号作为用户名进行 SSH 登录。
+
+接下来，我将为你提供可以直接使用的 SSH 登录命令。假设你的组号是 `groupX`，你可以使用以下命令：
+
+```bash
+ssh groupX@10.134.43.123 -p 2222
+```
+
+如果你希望使用简称为 `spark`，则需要编辑 SSH 配置文件。对于 macOS/Linux 用户，配置文件路径为 `~/.ssh/config`，对于 Windows 用户，路径为 `C:\Users\你的电脑用户名\.ssh\config`。请按照以下格式添加配置：
+
+```text
+Host spark
+    HostName 10.134.43.123
+    Port 2222
+    User 你的用户名
+    IdentityFile ~/.ssh/id_ed25519
+    ServerAliveInterval 30
+```
+
+完成上述配置后，你可以直接使用 `ssh spark` 命令进行登录。[dgx-login#7]
+
+注意，这里的 `你的用户名` 应替换为你的组号，即 `groupX`。[dgx-login#7]
+记录：/home/nanxiangjiang/Capstone-Project/2026-capstone/week06-1-knowledge-rag/提交/results/memory_demo/s6_guided_nomemory-20261015-071704-885997.json
+===== 最终记忆
+[
+  {
+    "id": 1,
+    "kind": "fact",
+    "text": "我本地有 4 张 RTX PRO 6000 显卡，平时用 GPU 跑实验",
+    "by": "user",
+    "created": "2026-10-15T07:14:20"
+  },
+  {
+    "id": 2,
+    "kind": "fact",
+    "text": "我前三周的作业都用 Qwen2.5 系列模型",
+    "by": "user",
+    "created": "2026-10-15T07:14:20"
+  },
+  {
+    "id": 3,
+    "kind": "fact",
+    "text": "我习惯用 conda 管理 Python 环境",
+    "by": "user",
+    "created": "2026-10-15T07:14:20"
+  },
+  {
+    "id": 4,
+    "kind": "fact",
+    "text": "我第三周作业的拓展方向是只改 Prompt 不改 Agent Loop",
+    "by": "user",
+    "created": "2026-10-15T07:14:20"
+  },
+  {
+    "id": 5,
+    "kind": "fact",
+    "text": "我在课程第 7 组。",
+    "by": "agent",
+    "created": "2026-10-15T07:14:31"
+  },
+  {
+    "id": 6,
+    "kind": "preference",
+    "text": "先给一句话结论，再分步骤，命令放在代码块里。",
+    "by": "agent",
+    "created": "2026-10-15T07:14:31"
+  }
+]

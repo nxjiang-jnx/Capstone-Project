@@ -1,0 +1,20 @@
+[Memory] 注入 1 条偏好、0 条事实；知识库 6 个片段（hybrid）
+[step 1] read_file {"path": "task.txt"}
+[step 1] search_knowledge {"query": "启动报错", "scope": ""}
+status: ok  回答校验: True
+根据知识库中的资料，可以尝试以下步骤来解决启动报错：
+
+1. 修改 `APP_PORT` 的值，将 `8000` 改为 `8001`，以避免端口被占用的问题。具体操作如下：
+   - 打开 `.env` 文件，找到 `APP_PORT=8000` 这一行。
+   - 将其修改为 `APP_PORT=8001`。
+   - 保存文件后，再次运行 `python app.py` 命令启动应用。
+
+如果上述步骤仍然无法解决问题，可以查看项目日志以获取更多信息。项目日志位于 `logs/app.log` 文件中。如果日志中有详细的错误信息，可以参考日志内容进一步排查问题。
+
+资料来源：
+- [troubleshooting#1]：端口占用错误（教学虚构资料）
+- [configuration#1]：本地配置文件（教学虚构资料）
+- [logging#1]：运行日志与排查（教学虚构资料）
+
+请按照上述步骤操作，并注意查看日志文件以获取更多细节。如果问题依然存在，请随时向我反馈。
+记录：/home/nanxiangjiang/Capstone-Project/2026-capstone/week06-1-knowledge-rag/提交/results/ref_toy/mine_example_3B-20261015-071721-752602.json

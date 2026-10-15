@@ -1,0 +1,100 @@
+{
+  "task": "混合检索里的 RRF 为什么按名次而不是按分数融合？示例里平滑常数 c 取多少？",
+  "memory_used": {
+    "preferences": [],
+    "facts": []
+  },
+  "trace": [
+    {
+      "step": 1,
+      "raw": "<tool_call>\n{\"name\": \"search_knowledge\", \"arguments\": {\"query\": \"混合检索 RRF 名次 分数 平滑常数 c\"}}\n</tool_call>",
+      "latency_s": 0.854,
+      "tool_calls": [
+        {
+          "name": "search_knowledge",
+          "arguments": {
+            "query": "混合检索 RRF 名次 分数 平滑常数 c"
+          }
+        }
+      ],
+      "observations": [
+        {
+          "name": "search_knowledge",
+          "arguments": {
+            "query": "混合检索 RRF 名次 分数 平滑常数 c"
+          },
+          "result": [
+            {
+              "id": "w06-slides-rag#16",
+              "title": "第六周第 1 次课课件：Knowledge 与 RAG › 第 16 页 2.1 RRF：按名次融合结果",
+              "text": "各路分数尺度不同，可以先比较排序位置\nrank 从 1 开始；c 为平滑常数；未出现在某一路时，该路贡献为 0。\n候选 | 关键词名次 | 向量名次 | RRF（示例 c = 60）\nA | 1 | 8 | 1/61 + 1/68 ≈ 0.03110\nB | 3 | 2 | 1/63 + 1/62 ≈ 0.03200\nB 略高于 A：两路靠前的候选可以获得更稳定的贡献。\n来源：Azure AI Search · RRF",
+              "score": 0.0328
+            },
+            {
+              "id": "w06-slides-rag#15",
+              "title": "第六周第 1 次课课件：Knowledge 与 RAG › 第 15 页 2.1 混合召回的并行路径",
+              "text": "同一批片段建立两套索引，同一问题获得两路候选\n建库：同一批片段建立向量与词项索引。查询：同一问题得到两份有序候选列表。 Rank fusion 融合排名，再按片段标识合并、去重，选出后续使用的材料。\nTF-IDF：词频—逆文档频率\n本篇越常见、全库越稀有的词，权重通常越高。\n来源：Anthropic · Contextual Retrieval；Azure AI Search · Hybrid search",
+              "score": 0.032
+            },
+            {
+              "id": "w06-slides-rag#19",
+              "title": "第六周第 1 次课课件：Knowledge 与 RAG › 第 19 页 2.2 组合方案中的职责分工",
+              "text": "补语境、融合召回和重排作用于不同位置\n建库时补语境\n改变片段的可检索表示。\n两路召回与融合\n降低单一路线的遗漏。\n重排后送入生成\n在有限预算内保留 更有用的候选证据。\nAnthropic Combined 架构图局部；图中 N 为重排前候选数，k 为最终上下文数量。\n来源：Anthropic · Contextual Retrieval；Sentence Transformers · Retrieve & Re-Rank",
+              "score": 0.0315
+            },
+            {
+              "id": "w06-slides-rag#29",
+              "title": "第六周第 1 次课课件：Knowledge 与 RAG › 第 29 页 3.1 检索流程的控制权",
+              "text": "底层检索服务相同，调用时机可以由不同机制决定\n固定的两步流程\n先检索，再生成。  查询入口与最大调用次数明确， 适合资料范围清楚的问答。\nAgent 选择检索\n模型决定是否查、查什么、是否补查。  可以根据已有结果调整查询， 同时增加路径变化与时延。\n变化发生在上层控制流程，前面讲的检索能力依然可以复用，由检索工具返回正文、来源、适用范围与检索状态。\n来源：LangChain Docs · Retrieval",
+              "score": 0.031
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "raw": "混合检索中的 RRF（Rank Fusion）按名次而不是按分数融合的原因是各路分数的尺度不同，直接按分数融合可能会导致不同尺度下的结果无法有效比较。因此，RRF 先比较排序位置，即 rank 从 1 开始。这样可以确保即使不同方法得到的分数差异较大，也能通过名次进行合理的融合。\n\n示例中提到的平滑常数 \\( c \\) 取值为 60。具体来说，候选 A 和 B 的 RRF 计算如下：\n\n- 候选 A: 名次 1, 向量名次 8, RRF（示例 \\( c = 60 \\)）= \\( \\frac{1}{61} + \\frac{1}{68} \\approx 0.03110 \\)\n- 候选 B: 名次 3, 向量名次 2, RRF（示例 \\( c = 60 \\)）= \\( \\frac{1}{63} + \\frac{1}{62} \\approx 0.03200 \\)\n\n根据这些计算结果，候选 B 略高于候选 A，因为两路靠前的候选可以获得更稳定的贡献。[w06-slides-rag#16]",
+      "latency_s": 6.092,
+      "tool_calls": []
+    }
+  ],
+  "status": "ok",
+  "answer": "混合检索中的 RRF（Rank Fusion）按名次而不是按分数融合的原因是各路分数的尺度不同，直接按分数融合可能会导致不同尺度下的结果无法有效比较。因此，RRF 先比较排序位置，即 rank 从 1 开始。这样可以确保即使不同方法得到的分数差异较大，也能通过名次进行合理的融合。\n\n示例中提到的平滑常数 \\( c \\) 取值为 60。具体来说，候选 A 和 B 的 RRF 计算如下：\n\n- 候选 A: 名次 1, 向量名次 8, RRF（示例 \\( c = 60 \\)）= \\( \\frac{1}{61} + \\frac{1}{68} \\approx 0.03110 \\)\n- 候选 B: 名次 3, 向量名次 2, RRF（示例 \\( c = 60 \\)）= \\( \\frac{1}{63} + \\frac{1}{62} \\approx 0.03200 \\)\n\n根据这些计算结果，候选 B 略高于候选 A，因为两路靠前的候选可以获得更稳定的贡献。[w06-slides-rag#16]",
+  "citation_checks": [
+    {
+      "cited": [
+        "w06-slides-rag#16"
+      ],
+      "invalid": [],
+      "urls": [],
+      "problems": [],
+      "passed": true,
+      "step": 2
+    }
+  ],
+  "citations_valid": true,
+  "retrieved_ids": [
+    "w06-slides-rag#15",
+    "w06-slides-rag#16",
+    "w06-slides-rag#19",
+    "w06-slides-rag#29"
+  ],
+  "total_s": 6.96,
+  "model": "models/Qwen2.5-7B-Instruct",
+  "system": "mine-nocheck",
+  "score": {
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [
+      "w06-slides-rag#16"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2
+  }
+}

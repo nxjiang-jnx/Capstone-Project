@@ -1,0 +1,65 @@
+{
+  "task": "MCP 服务可以向应用暴露哪三类能力？各有什么用途？",
+  "memory_used": [],
+  "trace": [
+    {
+      "step": 1,
+      "raw": "为了回答这个问题，我们首先需要查询相关的知识资料来了解MCP服务能够提供的三种能力及其用途。\n<tool_call>\n{\"name\": \"search_knowledge\", \"arguments\": {\"query\": \"MCP服务提供哪些能力及其用途\"}}\n</tool_call>",
+      "latency_s": 1.371,
+      "tool_calls": [
+        {
+          "name": "search_knowledge",
+          "arguments": {
+            "query": "MCP服务提供哪些能力及其用途"
+          }
+        }
+      ],
+      "observations": [
+        {
+          "name": "search_knowledge",
+          "result": [
+            {
+              "id": "w05-slides.md#33",
+              "text": " 页 3.2 服务可以暴露哪些能力\n\n动作、上下文资源和提示模板具有不同用途\n能力 | 用途 | 仓库场景中的概念例子\nTools | 可调用的操作 | 查询 Issue、搜索代码\nResources | 可读取的上下文资源 | 项目说明、指定文档内容\nPrompts | 可复用且可参数化的提示模板 | 按给定范围组织代码审查任务\n实际可用能力取决于 Host 与 Server 的支持，不要求每个服务同时提供三类。\n来源：MCP规范2026-07-28\n\n## 第 35 页 ",
+              "score": 0.6434
+            },
+            {
+              "id": "w05-slides.md#34",
+              "text": "服务同时提供三类。\n来源：MCP规范2026-07-28\n\n## 第 35 页 3.3 OpenHands 中的 MCP 接入\n\n应用发现服务能力，模型选择动作，服务执行并返回结果\n接入后的工作过程\nHost 发现服务提供的工具。 把能力描述提供给模型。 把选中的调用交给服务。 把返回结果交回模型。\n公开项目例子\nOpenHands 可接入 fetch 服务， 读取已知 URL 的内容。  GitHub MCP Server 提供仓库、 Issue 等相关能力。\nMCP 统一",
+              "score": 0.6296
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "raw": "根据查询到的信息，MCP服务可以向应用暴露三类能力：动作、上下文资源和提示模板。每种能力都有其特定的用途。\n\n- **动作**：这是一种可调用的操作，主要用于执行特定的任务，比如查询Issue或搜索代码。\n- **上下文资源**：这是一种可读取的上下文资源，用于提供关于项目的额外信息，如项目说明或指定文档的内容。\n- **提示模板**：这是一种可复用且可参数化的提示模板，用于自动化处理任务，例如按给定范围组织代码审查任务。\n\n需要注意的是，这些能力的实际可用性取决于服务提供者（Host）与服务端的支持，并非所有服务都必须同时提供这三类能力。具体细节请参考MCP规范2026-07-28。\n\n资料来源：\n- [w05-slides.md#33](https://github.com/yourusername/MCP-Specification/blob/master/w05-slides.md#33)\n- [w05-slides.md#34](https://github.com/yourusername/MCP-Specification/blob/master/w05-slides.md#34)",
+      "latency_s": 6.628,
+      "tool_calls": []
+    }
+  ],
+  "status": "ok",
+  "answer": "根据查询到的信息，MCP服务可以向应用暴露三类能力：动作、上下文资源和提示模板。每种能力都有其特定的用途。\n\n- **动作**：这是一种可调用的操作，主要用于执行特定的任务，比如查询Issue或搜索代码。\n- **上下文资源**：这是一种可读取的上下文资源，用于提供关于项目的额外信息，如项目说明或指定文档的内容。\n- **提示模板**：这是一种可复用且可参数化的提示模板，用于自动化处理任务，例如按给定范围组织代码审查任务。\n\n需要注意的是，这些能力的实际可用性取决于服务提供者（Host）与服务端的支持，并非所有服务都必须同时提供这三类能力。具体细节请参考MCP规范2026-07-28。\n\n资料来源：\n- [w05-slides.md#33](https://github.com/yourusername/MCP-Specification/blob/master/w05-slides.md#33)\n- [w05-slides.md#34](https://github.com/yourusername/MCP-Specification/blob/master/w05-slides.md#34)",
+  "total_s": 8.01,
+  "model": "models/Qwen2.5-3B-Instruct",
+  "system": "ref",
+  "score": {
+    "status": "ok",
+    "points": "3/3",
+    "all_points": true,
+    "cited": [
+      "w05-slides.md#33",
+      "w05-slides.md#34"
+    ],
+    "invalid_cites": [],
+    "has_valid_cite": true,
+    "urls": [
+      "https://github.com/yourusername/MCP-Specification/blob/master/w05-slides.md#33)",
+      "https://github.com/yourusername/MCP-Specification/blob/master/w05-slides.md#34)"
+    ],
+    "retrieved_gold": true,
+    "tool_calls": 1,
+    "steps": 2
+  }
+}

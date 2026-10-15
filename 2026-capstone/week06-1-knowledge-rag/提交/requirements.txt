@@ -1,0 +1,7 @@
+# 沿用前几周的环境即可；本作业实际运行版本：
+# Python 3.12.13，torch 2.11.0+cu128（CPU 也可运行，较慢），transformers 4.51.3
+transformers>=4.51,<5
+# torch 沿用已安装的 CPU/CUDA 版本，不在此处重新安装。
+# 仅在需要从课件 .pptx 重新生成 knowledge/ 时才需要（knowledge/ 已随作业提交）：
+python-pptx
+# 下载模型可用 modelscope 或 huggingface_hub（见 README），运行时不联网。
