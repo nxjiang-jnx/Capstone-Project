@@ -1,0 +1,352 @@
+{
+  "main_slides": 8,
+  "appendix_slides": 0,
+  "planned_seconds": 260,
+  "style": "white background; black and navy text with teal rules; no gray text or fills; large cover title and editable feedback-loop diagram; consistent body typography and table rules; no appendix or footers",
+  "sources": [
+    {
+      "path": "第一周_LLM推理/提交/qwen_inference.py",
+      "sha256": "f26c0f3b7c5ec6a96109ae6719f91d2878df82052406fdab9948f70f15d24f09"
+    },
+    {
+      "path": "第一周_LLM推理/提交/run.json",
+      "sha256": "1211e5d00ef367a6bccacbb3af280ffae78475d88e6135e22e8651750188aacb"
+    },
+    {
+      "path": "第一周_LLM推理/提交/提交说明.md",
+      "sha256": "dcbd70aa3834d69e3468e09b027502c54523193dbfdb100523f0e479002057b5"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/llm_app.py",
+      "sha256": "a6fd39c619ec5a1ccc65370369887de2689bf5d7aee2d02c7dd8b4adb3007e79"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/example.json",
+      "sha256": "f2c6d8b587359d246c4dbf08af9645efe3039667c11000c5b84d4f26e1166514"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/example_chat.turn01.json",
+      "sha256": "becb8558fab4d1314d7f17ebb3371b550fe23358f30b6768176409da0d511add"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/example_chat.turn02.json",
+      "sha256": "6956dd6819076c84438c8eb491391ba713945df3dacb5124900b4a816038e045"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_count_positive_repair0.json",
+      "sha256": "d4691941f24248b17e99e9ea2ad79ba06a429379363ffc23e541d84798055e4e"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_rle_repair0.json",
+      "sha256": "8cf444ad81cf42bfa227e30cd3c13dd9b415f56bb34fe43353657ca2d6540c71"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_second_largest_repair0.json",
+      "sha256": "3dc55a9ef86ff96f5211769738c1740a58f62a9896f9211d8cff179a5001f18b"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v1_count_positive_repair3.turn01.json",
+      "sha256": "3b89c0f00ea912f135368a53464395bfe6c73e55ee9fceeb35b8d2b5ff26032b"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v1_count_positive_repair3.turn02.json",
+      "sha256": "e19e39591f028ede5f1ccee1cd7e833a87be8c3047d66b48fbeb116e3b46b855"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v1_count_positive_repair3.turn03.json",
+      "sha256": "b11a640926b4f88321b2a118a72d0d7bfe1c0f935abf2d7189df1512fb15be1c"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v1_count_positive_repair3.turn04.json",
+      "sha256": "3644f3f7038dc948f1f021498be021a011d456d92cb576bee700b1227f379f75"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v1_rle_repair3.turn01.json",
+      "sha256": "abfb8bd72b8637f0b44478d9182ca85d8c3a490b65e628467816cacf1593d9c6"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v1_rle_repair3.turn02.json",
+      "sha256": "7a75858b709bd20a333c3096ddcd8e7e3a48c18cedb31b48cb7354a05e6924a6"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v1_rle_repair3.turn03.json",
+      "sha256": "4af3f58b45b243b32891b6709a21a5a89a8fa2173543f94b4c2dad5b8d6905bf"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v1_rle_repair3.turn04.json",
+      "sha256": "1e9dc8e4e1eb69055aa3229916b61fd8c3b4cee34beb27154f6fd664e44cb9a2"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v1_second_largest_repair3.turn01.json",
+      "sha256": "f8e401a2df090740df07f731fab0d3cf2d75b5882959183c81d9a81540ca13cb"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v1_second_largest_repair3.turn02.json",
+      "sha256": "9afd7a4eae30682fcfcfd3414ed3a6e5c399bbd7589382cd499cfe80034fea90"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v1_second_largest_repair3.turn03.json",
+      "sha256": "277271d58c56939fc7004c20ada1547573177f1e4edc844b6e3ed78b87f3f597"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v1_second_largest_repair3.turn04.json",
+      "sha256": "45864cacadb9df7a8819180f41073731d665ecb6f0e8ce560abd0181c1a2f01d"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v2_count_positive_repair3.turn01.json",
+      "sha256": "b70d0404a121900df8dd1e8bc2d4b7f37ee1e6b4570b6c98a9f139f8ed3b3d52"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v2_count_positive_repair3.turn02.json",
+      "sha256": "45ce9d647fe54ca8b14d026f24e5f7aef52e3308a639cbe33485346f5aa97036"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v2_count_positive_repair3.turn03.json",
+      "sha256": "4b376e95455a548a14de09bf99daf108fb9b8bf8bc9fadb1f5c4eb34891b7506"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v2_count_positive_repair3.turn04.json",
+      "sha256": "701f5968954cb946b458d572e47f075b681393a2ed080ccc39d15c97a3ec3946"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v2_rle_repair3.turn01.json",
+      "sha256": "916b9266cdc88625e40ae1f3814ca4ddc8fb20ec20cd7c154c69fd8610673eb6"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v2_rle_repair3.turn02.json",
+      "sha256": "51f9b54557d2802eca848894d1c408be5de09686357b38f169c9b9e753d3247d"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v2_rle_repair3.turn03.json",
+      "sha256": "8b547b79eb270c64be2f9d23712ae754cea13113a5c225d145c82c7c01841058"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v2_rle_repair3.turn04.json",
+      "sha256": "eba3a197663f447698e16d75edc067dd430a384e14ac2dfdcfb75c731746f642"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v2_second_largest_repair3.turn01.json",
+      "sha256": "a04ff9e4181bcea5a1da98afe1504ea42d9cc9bbe09efe2529f6a79cf04f87ff"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v2_second_largest_repair3.turn02.json",
+      "sha256": "d38ae2a7778a4d4d5ae5953d3e3c2e3d4e078890037a3e85694f2875eb4b6c73"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v2_second_largest_repair3.turn03.json",
+      "sha256": "e65b14e5222bb55f41d5babff6e5b1b1a604296ef01deb44f10d62b9f61c02a1"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v2_second_largest_repair3.turn04.json",
+      "sha256": "7bf1c7bed28c8dfdfcf1b890bac1b541f8ced9a221252bda84326d542646ec01"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v3fresh_count_positive_repair3.turn01.json",
+      "sha256": "f1bea575f78ecf3b6cf99491490936e1525c76fd1e3bc8c4ca4f9662d0b6f55a"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v3fresh_count_positive_repair3.turn02.json",
+      "sha256": "3a2e88aec041b6f42cce0bd4b072871ca77ce3d3e579255edf224507a059e1f0"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v3fresh_rle_repair3.turn01.json",
+      "sha256": "324f6405d94ae572cd16886c3a05c5bf245dac264db82367cc7ce06b435eba62"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v3fresh_rle_repair3.turn02.json",
+      "sha256": "5684085c2b410ef884414034d170f8649f09195e932425113f111081bde909e9"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v3fresh_rle_repair3.turn03.json",
+      "sha256": "6d87527f6e41ca330d3e9fe859f048f63285bed2b834725927f8ce4edbc33006"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v3fresh_rle_repair3.turn04.json",
+      "sha256": "5952806ef9aaac6f7a04283d5cfb4cd5671744576494831091c15df2e72a8e3b"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v3fresh_second_largest_repair3.turn01.json",
+      "sha256": "8ecb570d69ccec9f77051e1acf147bec38aa611df88d9f2ba9a4c3dd26790bbf"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v3fresh_second_largest_repair3.turn02.json",
+      "sha256": "54f0b4033650aa5c2ec2ba1d30d1555ea0056f7e27ea9842817d7ab1f904ff2b"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/ext_v3fresh_second_largest_repair3.turn03.json",
+      "sha256": "cb6c546a2af77248b5dd9e1eab8425c1d30a05d0e7028f7a0eddb3570e081751"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/results/plain.json",
+      "sha256": "8bbb0090e430d3664c49901e5188f70680f4893530e2f256480215e24c335d94"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/tasks/count_positive.json",
+      "sha256": "bfea74693c5e7a0003414b0d848b8870ed4e03388f3b42978eb317ec227af9e8"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/tasks/rle.json",
+      "sha256": "19ae74ea4fa446399f233fd1a3f789bc474062a7d779278029d975ec2df33b19"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/tasks/second_largest.json",
+      "sha256": "f8b68cfbd053572f900677848c4d3dae307dcea0d6bccf56c0db151dc59e9365"
+    },
+    {
+      "path": "第二周_LLM应用开发/提交/提交说明.md",
+      "sha256": "9bc989ec7f917081e6f6ff68573e3fcba6a0311331507f113a2d84d4a94a98bc"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/agent_v0.py",
+      "sha256": "4b568849b5e12dc4054429a79dacaa8fe382788b25bc966b2dc23875c1db8f24"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_1.5B_sample_base_seed1.json",
+      "sha256": "58bbe8da58f231e8fbcccf7506f520c00a22d0a3e959bbdcf77c600e83d5f2b6"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_1.5B_sample_base_seed2.json",
+      "sha256": "496c8799f29495840fcc5dd9535353a0e10eb76f3bb2456888139e4afbd4e827"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_1.5B_sample_base_seed3.json",
+      "sha256": "3a8dfe152b33da25239cf7476926f4aa0b19d562be8339889953c89fa11cba22"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_1.5B_sample_base_seed4.json",
+      "sha256": "12f5df8101dfad9c8d615847761e70eee5f0628d1b06321c782f3c981370570c"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_1.5B_sample_base_seed5.json",
+      "sha256": "26dde703a569813095ebc06f7de4e130ebb46dead5c776b2dacc12a664a1c69d"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_1.5B_sample_v2_seed1.json",
+      "sha256": "42cbe336c1b1ed1b5af4a11dfc9ac2b9f47e3ce787fc72dde9ce2f8217fc18ca"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_1.5B_sample_v2_seed2.json",
+      "sha256": "b6abb77d12bd12b488c40780b0e36452960c9b09aba74ee1a16be9309cf763db"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_1.5B_sample_v2_seed3.json",
+      "sha256": "14f7d2f0f7ead1d537f6c0029270028698df0483319c794b9339881a82d1beb1"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_1.5B_sample_v2_seed4.json",
+      "sha256": "aae8f352b3734607ffa719a0f8d238ea85c08898786c54ba9a8066326546b0ab"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_1.5B_sample_v2_seed5.json",
+      "sha256": "8562546d932934d04e1556e6f938ddb1117f1859032300cfbbc8d7a6e659441f"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_1.5B_sample_v3_seed1.json",
+      "sha256": "42b6cbdd6f5d2dac476b59914039f82df16a03fd60f07475f536c1d996768ba2"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_1.5B_sample_v3_seed2.json",
+      "sha256": "a2013984243efdd623442a3167f3b436f77194a2ff2ce172e89ca415037f02c3"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_1.5B_sample_v3_seed3.json",
+      "sha256": "408de36648c8f26137d4b9ad6a579fc67f0488c7523ef03920f01c98b721b34d"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_1.5B_sample_v3_seed4.json",
+      "sha256": "dcae6f3f54940326ea0a4efa6c34dad0a179e4a0ec00a3e414dc766a2b63da47"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_1.5B_sample_v3_seed5.json",
+      "sha256": "bc12ee34ba5ad17b985ff5e133d9931724792f25b4d09f8c787cb352d9d81f9d"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_3B_greedy_v2.json",
+      "sha256": "64612b15a57781cfb5bc2d550fad93980630de64e6f56af8626984fa29ccd817"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_3B_greedy_v3.json",
+      "sha256": "52408b79e797a283f2ef991a106e3829e0c0bccadacf05c5ad46bcf9db781918"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_7B_greedy_v2.json",
+      "sha256": "330e390cb8fcd5d2ed89cfbd2dfcada7df57f8c4d236339cdb4665755b2f6597"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/ext_7B_greedy_v3.json",
+      "sha256": "6961f6644345272581b88f9bf0edf9197a41e95059c3cc91062d2dceb9e5e1fd"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/run1_1.5B_greedy.json",
+      "sha256": "f37471cacc2b37dfb441c3a3fbed57a713c25927083cc7dc2aa7370f722fdfef"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/run2_1.5B_sample_t0.7.json",
+      "sha256": "f0189748ab6e2f156a1136e710e8ae3bcd0236bced2a89758ae8ee3d32414b04"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/run3_1.5B_sample_t1.2.json",
+      "sha256": "c0fbd37309f927b463393a7c32d4c85c3efb26e6b7bf11377ceee5516d01d5e7"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/run4_3B_greedy.json",
+      "sha256": "3a31a3ae3f94277104d8672f80aa540c4d58cba81fda140b653fbcaf8dc2b4e2"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/results/run5_7B_greedy.json",
+      "sha256": "50d6bae4cfa43f9e650416ca32a89c940c8c9c70bcafbddc516a2ad18bbe4316"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/workspace/test_report.txt",
+      "sha256": "ae19ce640b6df36afb5af2a65ab8622a39dceedd2e61c6604cf4d9cebb6c65d9"
+    },
+    {
+      "path": "第三周_Agent与工具调用/提交/提交说明.md",
+      "sha256": "91c85cb5e90f7ebd7f5e11a12843bb5224ebe08da02ae94b6aa737a620c34ea9"
+    }
+  ],
+  "layout_warnings": [],
+  "slides": [
+    {
+      "number": 1,
+      "title": "前三周学习与作业汇报",
+      "source": ""
+    },
+    {
+      "number": 2,
+      "title": "第一周：Qwen 模型推理",
+      "source": "第一周/提交/run.json；qwen_inference.py:58–95、139–147。最后层取样为[0,-1,:4]。"
+    },
+    {
+      "number": 3,
+      "title": "第二周：我想解决什么问题",
+      "source": "第二周/提交/results/plain.json、example.json、example_chat.turn01/02.json；原示例未执行功能测试。"
+    },
+    {
+      "number": 4,
+      "title": "代码改动：校验结果决定是否重试",
+      "source": "llm_app.py:123–168、325–338。代码省略异常处理和函数名检查；JSON、Schema、语法、函数名、测试共五层校验。"
+    },
+    {
+      "number": 5,
+      "title": "实验：保留错误回答，还是重新生成？",
+      "source": "results/ext_v2_*、ext_v3fresh_*；次数为自动修复次数，不含首次生成；上限均为3次。"
+    },
+    {
+      "number": 6,
+      "title": "第三周：Agent 自测与五组实验",
+      "source": "agent_v0.py --selftest：本次复核14项全PASS；run1–run5。组3→4同时改变模型与采样开关。"
+    },
+    {
+      "number": 7,
+      "title": "看调用链：问题出在哪一步",
+      "source": "run1_1.5B_greedy.json、run4_3B_greedy.json；ext_3B/7B_greedy_v2/v3。每条链的逐步详情在讲稿中。"
+    },
+    {
+      "number": 8,
+      "title": "这次拓展的结果与不足",
+      "source": "结论仅限现有三个代码任务；单变量补跑与最终答案检查为下一步，尚未实施。"
+    }
+  ],
+  "preview_method": "Pillow renders shared layout; not an Office engine export"
+}

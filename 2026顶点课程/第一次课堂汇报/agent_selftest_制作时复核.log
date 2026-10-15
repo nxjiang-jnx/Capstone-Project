@@ -1,0 +1,15 @@
+PASS  T1 单步计算: status=ok steps=2
+PASS  T2 两步调用: status=ok steps=3
+PASS  T3 无需工具: status=ok steps=1
+PASS  T4a 参数非法后修正: status=ok steps=3
+PASS  T4b 未知工具后修正: status=ok steps=3
+PASS  T4c 除零后修正: status=ok steps=3
+PASS  T5 重复调用（无进展）: status=no_progress steps=3
+PASS  T6 步数上限: status=max_steps steps=3
+PASS  T7 格式持续错误: status=too_many_failures steps=3
+PASS  T8 越权读文件后失败: status=too_many_failures steps=2
+PASS  拒绝非法表达式 "__import__('os').system(": execution_error
+PASS  拒绝非法表达式 '2**9999999': execution_error
+PASS  拒绝非法表达式 'abs(-1)': execution_error
+PASS  自选工具 word_count: {'status': 'ok', 'result': {'lines': 2, 'words': 2, 'chars': 19}}
+全部通过
